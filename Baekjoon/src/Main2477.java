@@ -1,59 +1,50 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Main2477 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
+		Scanner sc = new Scanner(System.in);
+		
 		// 1제곱당 열리는 참외 개수
-		int K = Integer.parseInt(br.readLine());
+		int K = sc.nextInt();
 		int[] dir = new int[6];
 		int[] s = new int[6];
 		
-		//방향과 길이를 받고 배열에 넣는다.
+		int wmax = 0;
+		int hmax = 0;
+		//방향과 길이를 받고 배열에 넣는다. 큰 사각형을 구할 가로 세로 크기를 구한다.
 		for (int i = 0; i < 6; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
 
-			int direction = Integer.parseInt(st.nextToken());
-			int side = Integer.parseInt(st.nextToken());
+			int direction = sc.nextInt();
+			int side = sc.nextInt();
 			
 			dir[i] = direction;
 			s[i] = side;
+			
+			if(direction == 3 || direction == 4) {
+				if (wmax < side) {
+					wmax = side;
+				}
+			} else if (direction == 1 || direction == 2) {
+				if (hmax < side) {
+					hmax = side;
+				}
+			}
 		}
 		
 		// 3-> 2 or 1 -> 3 or 4 -> 1 or 2 -> 4일 때 마이너스
-		int m = 0; //큰 사각형에서 마이너스해야 할 값
+		int smallsquare = 0; //큰 사각형에서 뺄 작은 사각형의 크기
 		for(int i =0; i < dir.length-1; i++) {
-			int t = dir[i];
-			int t1 = dir[i+1];
+			int t = dir[i], t1 = dir[i+1];
 			if (t==3&&t1==2 || t==1&&t1==3 || t==4&&t1==1 || t==2&&t1==4) {
-				m=s[i]*s[i+1];
+				smallsquare=s[i]*s[i+1];
 			}
 		}
-		// 큰 사격형의 크기를 구한다.
-		int width = 0;
-		int heigh = 0;
-		for (int i = 0; i < dir.length; i++) {
-			if (dir[i]==4) {
-				width+=s[i];
-			}
-			if (dir[i]==1) {
-				heigh+=s[i];
-			}
-		}
-		int square = width*heigh;
-		int extend = square-m;
 		
-		int ans = extend*K;
+		//큰 사각형에서 작은 사각형을 뺀다.
+		int bigsquare = wmax*hmax;
+		int extend = bigsquare-smallsquare;
 		
-		bw.write(ans+"");
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(extend*K);
 	}
 }
