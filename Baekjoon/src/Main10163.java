@@ -9,39 +9,45 @@ public class Main10163 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
-		//ìƒ‰ì¢…ì´ ê°œìˆ˜ ë°›ê¸°
+
+		// »öÁ¾ÀÌ °³¼ö ¹Ş±â
 		int T = Integer.parseInt(br.readLine());
-		
-		//ë°°ì—´ ë§Œë“¤ê¸°
+
+		// ¹è¿­ ¸¸µé±â
 		int[][] arr = new int[1001][1001];
-		
-		//ìƒ‰ì¢…ì´ ê°œìˆ˜ ë§Œí¼ ìœ„ì¹˜ ë°›ê¸°
+
+		// »öÁ¾ÀÌ °³¼ö ¸¸Å­ À§Ä¡ ¹Ş±â
 		for (int t = 1; t <= T; t++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			
+
 			int start = Integer.parseInt(st.nextToken());
 			int start1 = Integer.parseInt(st.nextToken());
 			int w = Integer.parseInt(st.nextToken());
 			int h = Integer.parseInt(st.nextToken());
-			
-			for (int i = start; i < w; i++) {
-				for (int j = start1; j < h; h++) {
-					arr[i][j] = 0;
-				}
-			}
-			
-			for (int i = start; i < w; i++) {
-				for (int j = start1; j < h; h++) {
+
+			// »öÁ¾ÀÌ ºÎºĞ 0À¸·Î ¿ì¼± Ã¤¿ì±â
+			// »öÁ¾ÀÌÀÖ´Â °÷ ÇØ´ç ¼ıÀÚ·Î Ã¤¿ì±â
+			for (int i = start; i < start + w; i++) {
+				for (int j = start1; j < start1 + h; j++) {
 					arr[i][j] = t;
 				}
 			}
-			
+		}
+		// »öÁ¾ÀÌ ¼ø¼­´ë·Î ¸î°³ Â÷ÁöÇÏ°í ÀÖ´ÂÁö Ãâ·Â
+		for (int z = 1; z <= T; z++) {
+			int cnt = 0;
 			for (int i = 0; i < 1001; i++) {
-				for (int j = 0; j < 1001; h++) {
-					
+				for (int j = 0; j < 1001; j++) {
+					if (arr[i][j] == z) {
+						cnt++;
+					}
 				}
 			}
+			bw.write(cnt + "");
+			bw.newLine();
 		}
+		bw.flush();
+		br.close();
+		bw.close();
 	}
 }

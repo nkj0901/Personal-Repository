@@ -1,29 +1,34 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main2309 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
-		// ë°°ì—´ë§Œë“¤ê¸°
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		//¹è¿­¸¸µé±â
+		int sum = 0;
 		int[] arr = new int[9];
-		int sum = 0; // ì•„í™‰ëª…ì˜ ë‚œìŸì´ í‚¤ì˜ í•©
-		for (int i = 0; i < 9; i++) {
-			arr[i] = sc.nextInt();
-			sum += arr[i];
+		for (int n = 0; n < 9; n++) {
+			int N = Integer.parseInt(br.readLine());
+			arr[n] = N;
+			sum+=arr[n];
 		}
-
-		// -2í•´ì„œ 100ì´ ë˜ëŠ” ê²½ìš° ì¶œë ¥í•˜ê¸°
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = i + 1; j < arr.length; j++) {
+		
+		//¼ıÀÚ µÎ°³ »Ì°í ³ª¸ÓÁö ´Ù ´õÇØº¸±â
+		for (int i = 0; i < arr.length-1; i++) {
+			for (int j = 1; j < arr.length; j++) {
+				
 				if (sum - arr[i] - arr[j] == 100) {
-					arr[i] = 0;
-					arr[j] = 0;
-					Arrays.sort(arr);
-					for (int x = 2; x < arr.length; x++) {
-						System.out.println(arr[x]);
+					for (int n = 0; n < arr.length; n++) {
+						if(arr[n] != arr[i] && arr[n] != arr[j]) {
+							System.out.println(arr[n]);
+						}
 					}
-					return;
 				}
 			}
 		}
