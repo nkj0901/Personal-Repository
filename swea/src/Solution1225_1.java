@@ -1,5 +1,3 @@
-package swea;
-
 import java.io.IOException;
 import java.util.Scanner;
 
