@@ -14,14 +14,14 @@ public class Solution1954 {
 		for (int t = 1; t <= T; t++) {
 			int N = Integer.parseInt(br.readLine());
 			int[][] arr = new int[N][N];
-			int k = N; // ¹Ýº¹È½¼ö
-			int first = 0; //ÀÎµ¦½º¿¡¼­ ¾²ÀÏ °Í
-			int last = N - 1; //ÀÎµ¦½º¿¡¼­ ¾²ÀÏ °Í
+			int k = N; // ï¿½Ýºï¿½È½ï¿½ï¿½
+			int first = 0; //ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+			int last = N - 1; //ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 			int num = 1;
 			
 			for (int i = 0; i < N; i++) {
 
-				// À§
+				// ï¿½ï¿½
 				for (int j = first; j < k+first; j++) {
 					arr[first][j] = num++;
 				}
@@ -34,21 +34,21 @@ public class Solution1954 {
 					break;
 				}
 
-				// ¿À¸¥ÂÊ
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				for (int j =  first; j < k+first; j++) {
 					arr[j][last] = num++;
 				}
 				// last = 4; first = 1; k = 4; 
 				// last = 3; first = 2; k = 2;
 
-				// ¾Æ·¡ÂÊ
+				// ï¿½Æ·ï¿½ï¿½ï¿½
 				for (int j = last-1; j >= last-k; j--) {
 					arr[last][j] = num++;
 				}
 				k--;// first = 1; last = 4; k = 3
 				// last = 3; first = 2; k = 1;
 
-				// ¿ÞÂÊ
+				// ï¿½ï¿½ï¿½ï¿½
 				for (int j = last-1; j >= last-k; j--) {
 					arr[j][first-1] = num++;
 				}
