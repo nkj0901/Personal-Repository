@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Solution1125_1 {
+public class Solution1225 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -13,24 +13,8 @@ public class Solution1125_1 {
 			int T = sc.nextInt();
 
 			// 배열 만들기
-			//최솟값 찾기
-			int min = Integer.MAX_VALUE;
 			for (int i = 0; i < 8; i++) {
-				int n = sc.nextInt();
-				q.offer(n);
-				if (n < min) {
-					min = n;//가장 작은 
-				}
-			}
-			int cnt = 0;
-			//최솟값이 15이하가 되면 멈춰!
-			while (min > 15) {
-				min-=15;
-				cnt++;
-			}
-			
-			for (int i =0; i < q.size(); i++) {
-				q.add(q.remove()-(15*cnt));
+				q.offer(sc.nextInt());
 			}
 
 			loop: while (true) {

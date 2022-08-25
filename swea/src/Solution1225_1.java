@@ -1,100 +1,55 @@
-import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Solution1225_1 {
-
-	static class Node {
-		int data;
-		Node link;
-
-		public Node(int data) {
-			this.data = data;
-			this.link = null;
-		}
-	}
-
-	static class LinkedQueue {
-		static Node front;
-		static Node rear;
-		static int size;
-
-		// isEmpty
-		public static boolean isEmpty() {
-			return size == 0;
-		}
-
-		// enQueue
-		public static void enQueue(int data) {
-			Node node = new Node(data);
-			if (size == 0) {
-				front = node;
-				rear = node;
-			} else {
-				rear.link = node;
-				rear = node;
-			}
-			size++;
-		}
-
-		// deQueue
-		public static void deQueue() {
-			if (size == 0) {
-				System.out.println("출력할 데이터가 없습니다.");
-			} else {
-				if (size > 1) {
-					front = front.link;
-				}
-				size--;
-			}
-		}
-
-		// printQueue
-		public static void printQueue() {
-			if (isEmpty()) {
-				System.out.println("출력할 데이터가 없습니다.");
-			} else {
-				for (int i = 0; i < 8; i++) {
-					System.out.print(front.data + " ");
-					if (front.link != null) {
-						front = front.link;
-					}
-				}
-			}
-		}
-	}
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-		for (int t = 1; t <= 10; t++) {
-			LinkedQueue.front = null;
-			LinkedQueue.rear = null;
-			LinkedQueue.size = 0;
 
+		while (sc.hasNext()) {
+			Queue<Integer> q = new LinkedList<>();
+
+			// 테스트케이스 입력
 			int T = sc.nextInt();
 
-			// 링크드 큐에 집어넣기
+			// 배열 만들기
+			//최솟값 찾기
+			int min = Integer.MAX_VALUE;
 			for (int i = 0; i < 8; i++) {
-				int x = sc.nextInt();
-				LinkedQueue.enQueue(x);
+				int n = sc.nextInt();
+				q.offer(n);
+				if (n < min) {
+					min = n;//가장 작은 
+				}
+			}
+			int cnt = 0;
+			//최솟값이 15이하가 되면 멈춰!
+			while (min > 15) {
+				min-=15;
+				cnt++;
+			}
+			
+			for (int i =0; i < q.size(); i++) {
+				q.add(q.remove()-(15*cnt));
 			}
 
-			// 하나씩 디큐한다음 -하고 뒤로 다시 붙여넣기
-			boolean stop = true;
-			while (stop) {
+			loop: while (true) {
 				for (int i = 1; i <= 5; i++) {
-					int x = LinkedQueue.front.data;
-					LinkedQueue.deQueue();
-					LinkedQueue.enQueue(x - i);
-					if (x-i <= 0) {
-						stop = false;
-						break;
+					int tmp = q.poll() - i;
+					
+					if (tmp <= 0) {
+						q.offer(0);
+						break loop;
+					} else {
+						q.offer(tmp);
 					}
 				}
 			}
-			LinkedQueue.rear.data = 0;
+
 			System.out.print("#" + T + " ");
-			LinkedQueue.printQueue();
+			for (int j = 0; j < 8; j++) {
+				System.out.print(q.poll() + " ");
+			}
 			System.out.println();
 		}
 	}
