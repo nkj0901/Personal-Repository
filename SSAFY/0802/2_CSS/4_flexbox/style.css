@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  position: relative;
+}
+.flex-container {
+  width: 300px;
+  height: 300px;
+  background: silver;
+  border: 5px solid black;
+  color: white;
+}
+.flex-container > div {
+  font-size: 30px;
+  text-align: center;
+  background: #112233;
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+}

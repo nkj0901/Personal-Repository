@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flexbox</title>
+    <style>
+      body {
+        font-size: 25px;
+      }
+      .container {
+        width: 1000px;
+        margin: 30px auto;
+      }
+      .flex-inline,
+      .flex-block {
+        background: rgb(7, 7, 7);
+        color: white;
+      }
+      .flex-inline > *,
+      .flex-block > * {
+        margin: 30px;
+        border: 1px solid black;
+      }
+      .flex-inline {
+        /* inline 성격의 flex */
+        display: inline-flex;
+      }
+      .flex-block {
+        /* block 성격의 flex */
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>display: inline-flex</h2>
+      <span>시작</span>
+      <div class="flex-inline">
+        <div>inline-flex</div>
+      </div>
+      <span>끝</span>
+      <h2>display: flex</h2>
+      <span>시작</span>
+      <div class="flex-block">
+        <div>flex</div>
+      </div>
+      <span>끝</span>
+    </div>
+  </body>
+</html>

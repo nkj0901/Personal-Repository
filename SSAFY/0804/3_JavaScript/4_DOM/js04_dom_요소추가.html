@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="list"></div>
+    <script>
+      let ele = document.createElement("img");
+      let parent = document.getElementById("list");
+      // parent.append(ele);
+      parent.appendChild(ele)
+
+      ele.setAttribute("src", "./images/burger.jpg")
+      ele.setAttribute("width", "200px")
+
+      // ele.src="./images/cake.jpg"
+      // ele.setAttribute("width",200);
+    //   ele.getAttribute("width")
+      // ele.setAttribute("data-cake", 1)
+
+    
+      let h1Tag = document.createElement("h1");
+    
+      let msg = document.createTextNode("안녕하세요.")
+      h1Tag.appendChild(msg);
+      parent.append(h1Tag)
+
+      // h1Tag.innerHTML = "<div>나는 디브 태그</div>"
+      h1Tag.innerText = "<div>나는 디브 태그</div>"
+    </script>
+  </body>
+</html>

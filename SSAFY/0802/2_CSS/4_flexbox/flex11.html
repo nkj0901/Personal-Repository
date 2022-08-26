@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        height: 300px;
+      }
+
+      .flex-container > * {
+        flex: 0 1 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>flex: flex-grow, flex-shrink, flex-basis</h2>
+      <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

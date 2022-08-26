@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .flex-container {
+        display: inline-flex;
+        flex-flow: row wrap;
+
+        /* align-content: stretch; */
+        /* align-content: flex-start; */
+        /* align-content: flex-end; */
+        /* align-content: center; */
+        /* align-content: space-around; */
+        align-content: space-between;
+      }
+      .flex-container > div {
+        height: auto;
+        min-height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        align-content: auto | flex-start | flex-end | center | baseline |
+        stretch
+      </h2>
+      <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

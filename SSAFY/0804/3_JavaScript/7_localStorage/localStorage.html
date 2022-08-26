@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로컬스토리지실습</title>
+  </head>
+  <body>
+    <h1>로컬스토리지</h1>
+    <input type="text" id="input" placeholder="저장하고 싶은 값을 입력" />
+    <button id="create">등록</button>
+    <button id="read">조회</button>
+    <button id="delete">삭제</button>
+    <h2>저장된 내용</h2>
+    <div id="save"></div>
+    <script>
+      //등록 이벤트를 처리해보자.
+
+      let arr1 = [];
+      let createBtn = document.querySelector("#create");
+      createBtn.addEventListener("click", function () {
+        // let inputData = document.querySelector("#input").value;
+        let inputTag = document.querySelector("#input");
+        //데이터를 json문자열으로 바꿔줌맍
+        let jsonData = JSON.stringify(inputTag.value);
+        arr1.push(jsonData);
+        let jsonData1 = JSON.stringify(arr1);
+        localStorage.setItem("data", jsonData1);
+        inputTag.value = "";
+      });
+
+      //조회 이벤트를 처리해보자.
+      document.querySelector("#read").addEventListener("click", function () {
+        //어디다가??
+        let readTag = document.querySelector("#save");
+
+        //어떤 데이터를?
+        let jsonData = localStorage.getItem("data");
+        if (jsonData != null) {
+          let data = JSON.parse(jsonData);
+          readTag.innerText = data;
+        }
+      });
+
+      //삭제 이벤트
+      document.querySelector("#delete").addEventListener("click", function () {
+        localStorage.removeItem("data");
+      });
+    </script>
+  </body>
+</html>

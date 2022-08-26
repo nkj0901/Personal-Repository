@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>교차축 정렬</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .flex-container {
+        display: inline-flex;
+
+        flex-flow: row wrap;
+
+        /* align-items: stretch; */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: baseline; */
+      }
+
+      .flex-container > div {
+        width: 54px;
+        height: auto;
+        /* min-height: 80px; */
+      }
+      div.big-font {
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>align-items: stretch | flex-start | flex-end | center | baseline</h2>
+      <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div class="big-font">3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

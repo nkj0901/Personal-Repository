@@ -1,0 +1,82 @@
+package com.ssafy.ws.step2;
+
+import java.util.Scanner;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		IMovieManager movieManager = MovieManagerImpl.getInstance();
+		int sel;
+		do {
+			System.out.println("1. 추가\n2. 영화조회\n3. 제목검색\n4. 평균상영시간 조회\n0. 종료");
+			sel = sc.nextInt();
+			if (sel == 1) {
+				System.out.println("영화를 추가합니다..");
+				System.out.print("제목 : ");
+				sc.nextLine();// nextLine이 아닌 입력을 받은 직후에 nextLine하려면, 엔터를 버리자.
+				String title = sc.nextLine();
+				System.out.print("감독 : ");
+				String director = sc.nextLine();
+				System.out.print("장르 : ");
+				String genre = sc.nextLine();
+				System.out.print("런닝타임 : ");
+				int runnintTime = sc.nextInt();
+				System.out.println("1. 일반영화  2. 시리즈영화");
+				int type = sc.nextInt();
+				if (type == 1) {
+					Movie movie = new Movie(movieManager.getSize(), title, director, genre, runnintTime);
+					movieManager.add(movie);
+					movieManager.saveData();
+				} else if (type == 2) {
+					System.out.print("시리즈넘버 : ");
+					int seriesNum = sc.nextInt();
+					System.out.print("episode : ");
+					String episode = sc.next();
+					Movie movie = new SeriesMovie(movieManager.getSize(), title, director, genre, runnintTime,
+							seriesNum, episode);
+					movieManager.add(movie);
+					movieManager.saveData();
+				}
+			} else if (sel == 2) {
+				System.out.println("영화를 조회합니다.");
+				System.out.println("1. 일반영화  2. 시리즈 영화  3. 모든영화");
+				int type = sc.nextInt();
+				movieManager.loadDate();
+				if (type == 1) {
+					Movie[] movies = movieManager.getMovies();
+					for (Movie m : movies) {
+						System.out.println(m);
+					
+				} else if (type == 2) {
+					SeriesMovie[] movies = movieManager.getSeriesMovies();
+					for (SeriesMovie m : movies) {
+						System.out.println(m);
+					}
+				} else if (type == 3) {
+					Movie[] movies = movieManager.getList();
+					for (Movie m : movies) {
+						System.out.println(m);
+					}
+				}
+			} else if (sel == 3) {
+				System.out.println("제목을 검색합니다.");
+				System.out.println("영화 제목을 입력하세요.");
+				String keyword = sc.next();
+				Movie[] movies;
+				try {
+					movies = movieManager.searchByTitle(keyword);
+					for (Movie m : movies) {
+						System.out.println(m);
+					}
+				} catch (TitleNotFoundException e) {
+					System.out.println(e.getMessage());
+					//e.printStackTrace();
+				}
+
+			} else if (sel == 4) {
+				System.out.println(movieManager.getRunningTimeAvg());
+			}
+		} while (sel != 0);
+	}
+
+}

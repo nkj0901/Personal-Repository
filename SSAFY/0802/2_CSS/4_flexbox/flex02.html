@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .flex-container {
+        display: flex;
+        /* 기본값 */
+        /* flex-direction: row; */
+
+        flex-wrap: nowrap;
+        /* flex-wrap: wrap; */
+        /* flex-wrap: wrap-reverse; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>flex-wrap : nowrap | wrap | wrap-reverse</h2>
+      <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

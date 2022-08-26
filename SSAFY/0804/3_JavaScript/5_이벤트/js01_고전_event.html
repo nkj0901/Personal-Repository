@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+</head>
+<body>
+    <button onclick="alert('누르지말라니까')">누르지마시오.</button>
+    <button onclick="doSometing()">함수 실행</button>
+    <button id="btn">버튼</button>
+    <script>
+        function doSometing() {
+            let sum = 0
+            for(let i = 0 ; i < 10; i++){
+                sum += i;
+            }
+            console.log(sum)
+        }
+        let btn = document.querySelector("#btn")
+        btn.onclick = doAction;
+
+        function doAction(){
+            alert("클릭했다")
+        }
+    </script>
+</body>
+</html>

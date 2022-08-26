@@ -1,0 +1,9 @@
+package 예상문제;
+
+public class 문제 {
+	public static void main(String[] args) {
+		
+		System.out.printf("%4d\n", 10);
+		System.out.printf("%-4d\n", 10);
+	}
+}

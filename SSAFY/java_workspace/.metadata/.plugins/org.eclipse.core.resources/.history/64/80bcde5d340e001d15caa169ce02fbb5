@@ -1,0 +1,27 @@
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class swea1288 {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	
+	int tc = sc.nextInt();
+	for(int t = 0; t < tc; t++) {
+		int N = sc.nextInt();
+		
+		Set<Integer> numbers = new HashSet<>();	
+		//9까지 담을 수 있는 set을 만듬. 중복된 숫자가 들어가도 자동 삭제
+	while (numbers.size()==9) {
+		int count = 1;
+		//곱해서 나온 숫자를 한개씩 나눠야함.
+		int tmp = N * count;
+		int[] tmparr = (String)tmp.split("");
+		
+	}
+	}
+	
+}
+	
+}
