@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <style>
+    .done {
+      text-decoration: line-through;
+    }
+    </style>
+</head>
+<body>
+    <div>TODO LIST</div>
+    <input class ="data" type="text" placeholder="write todo list" >
+    <button class = "btn">저장</button>
+    <hr>
+
+    <button class="donebtn">Done</button>
+    <button class="todobtn">Todo</button>
+    <button class="allbtn">All</button>
+
+    <div>Todo List</div>
+    <ul class="todo-list">
+
+    </ul>
+    <script>
+        const todoList = document.querySelector(".todo-list");
+        const btn = document.querySelector(".btn");
+        const data = document.querySelector(".data");
+        const donebtn = document.querySelector(".donebtn")
+        const Todobtn = document.querySelector(".todobtn")
+        const Allbtn = document.querySelector(".allbtn")
+        //초기세팅
+        window.addEventListener("load", function () {
+            arr = localStorage.getItem("arr")
+            
+            if (arr !== null){
+                arr = JSON.parse(arr)
+                for (let i = 0; i < arr.length; i++){
+                    createtodoitem(arr[i])
+                }
+            } 
+        });
+        
+        
+        //일단 입력하면 todo리스트 아래 뜨게 만들기
+        var arr = []; 
+        function addList() {
+            const inputdata = data.value;
+            if (!inputdata.trim()){
+               alert("할 일을 입력하세요.");
+            } else {
+                let todoitem = {
+                    todo: inputdata,
+                    done: false,
+                };
+                arr.push(todoitem);
+                console.log(arr);              
+                createtodoitem(todoitem);
+                localStorage.setItem("arr", JSON.stringify(arr));
+            }
+
+        }
+
+        function createtodoitem(todoitem){
+            const litag = document.createElement("li")
+                litag.innerText = todoitem.todo;
+                todoList.appendChild(litag);
+                data.value= ""
+
+                //클릭하면 다 된 거로 표시
+                litag.addEventListener("click", function(event){
+                    event.target.classList.toggle("done");
+
+                    for (let i = 0; i < arr.length; i++){
+                        if (arr[i].todo === todoitem.todo) arr[i].done = !arr[i].done  
+                    }
+
+                    localStorage.setItem('arr', JSON.stringify(arr));
+                })
+        }
+
+        //done 누르면 다 된 거 조회
+        function donelist(){
+
+        }
+
+
+        btn.addEventListener("click", addList);
+      
+    </script>
+</body>
+</html>
