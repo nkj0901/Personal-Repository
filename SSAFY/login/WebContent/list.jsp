@@ -17,7 +17,7 @@
 		<c:forEach var="p" items="${personList }">
 			<tr>
 				<td>${p.no }</td>
-				<td><a herf="person?action=getDetail&no=" + p.no> ${p.name }</td>
+				<td><a href="person?action=getDetail&no=${p.no }">${p.name }</a></td>
 			</tr>
 		</c:forEach>
 	</table>

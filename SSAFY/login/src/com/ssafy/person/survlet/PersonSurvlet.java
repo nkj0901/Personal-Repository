@@ -44,6 +44,8 @@ public class PersonSurvlet extends HttpServlet {
 		case "deletePerson" :
 			doDeletePerson(request, response);
 			break;
+		case "updateForm" :
+			doUpdateForm(request, response);
 		default : 
 			break;
 		}
@@ -76,7 +78,6 @@ public class PersonSurvlet extends HttpServlet {
 		Person p = new Person(no, name, age, msg);
 		
 		manager.addPerson(p);
-		System.out.println(manager.getList().size());
 		response.sendRedirect("person?action=getDetail&no=" + no);
 	}
 	
@@ -93,7 +94,13 @@ public class PersonSurvlet extends HttpServlet {
 		request.getRequestDispatcher("list.jsp").forward(request, response);
 	}
 	
+	private void doUpdateForm(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		
+		request.getRequestDispatcher("update.jsp").forward(request, response);
+	}
+		
 	private void doUpdatePerson(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
 		int no = Integer.parseInt(request.getParameter("no"));
 		String name = request.getParameter("name");
 		int age = Integer.parseInt(request.getParameter("age"));
