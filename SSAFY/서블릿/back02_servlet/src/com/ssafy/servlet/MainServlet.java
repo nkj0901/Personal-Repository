@@ -20,7 +20,7 @@ public class MainServlet extends HttpServlet {
 		doProcess(request,response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		doGet(request, response);
 	}
 	
@@ -56,6 +56,5 @@ public class MainServlet extends HttpServlet {
 		writer.append(p.toString());
 		writer.append("</body>");
 		writer.append("</html>");
-		
 	}
 }
