@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main2503 {
@@ -25,56 +26,58 @@ public class Main2503 {
 			ans[i][0] = Integer.parseInt(st.nextToken());
 			ans[i][1] = Integer.parseInt(st.nextToken());
 		}
-		int num = 123; // 세자리 숫자중에 제일 작은 수
-		int A =0;
-		//숫자 하나씩 늘려가면서 볼거야
-		while (num <=987) {
-			int cnt = 0;
-			int strike = 0;
-			int ball = 0;
-			String str = num + ""; //숫자 문자열로 만들어줘~
-			
-			//이 숫자가 주어진 숫자들과 비교했을 때, 스타라이크와 볼이 몇개인지 확인
-			//주어진 답과 수가 일치하면 정답 후보가 됨(cnt++)
-			for (int i = 0; i < 4; i++) {
-				
-					if (arr[i][0] == str.charAt(0)) {
-						strike++;
-					} else if (arr[i][0] == str.charAt(1)) {
-						ball++;
-					} else if (arr[i][0] == str.charAt(2)) {
-						ball++;
-					}	
-					
-					if (arr[i][1] == str.charAt(0)) {
-						ball++;
-					} else if (arr[i][1] == str.charAt(1)) {
-						strike++;
-					} else if (arr[i][1] == str.charAt(2)) {
-						ball++;
+
+		int A = 0;
+		for (int hun = 1; hun <= 9; hun++) {
+			for (int ten = 1; ten <= 9; ten++) {
+				for (int one = 1; one <= 9; one++) {
+					int cnt = 0;
+
+					// 이 숫자가 주어진 숫자들과 비교했을 때, 스타라이크와 볼이 몇개인지 확인
+					// 주어진 답과 수가 일치하면 정답 후보가 됨(cnt++)
+					for (int i = 0; i < N; i++) {
+						int strike = 0;
+						int ball = 0;
+
+						if (arr[i][0] == hun) {
+							strike++;
+						} else if (arr[i][0] == ten) {
+							ball++;
+						} else if (arr[i][0] == one) {
+							ball++;
+						}
+
+						if (arr[i][1] == hun) {
+							ball++;
+						} else if (arr[i][1] == ten) {
+							strike++;
+						} else if (arr[i][1] == one) {
+							ball++;
+						}
+
+						if (arr[i][2] == hun) {
+							ball++;
+						} else if (arr[i][2] == ten) {
+							ball++;
+						} else if (arr[i][2] == one) {
+							strike++;
+						}
+						if (ans[i][0] == strike && ans[i][1] == ball) {
+							cnt++;
+						} else {
+							break;
+						}
 					}
-					
-					if (arr[i][2] == str.charAt(0)) {
-						ball++;
-					} else if (arr[i][2] == str.charAt(1)) {
-						ball++;
-					} else if (arr[i][2] == str.charAt(2)) {
-						strike++;
+					if (cnt == N) {
+						if (hun != ten && hun != one && ten != one)
+						A++;
 					}
-					if (ans[i][0] == strike || ans[i][1] == ball) {
-						cnt++;
-					}
+				}
 			}
-			if (cnt == 4) {
-				A++;
-			}
-			System.out.println(num);
-			num++;
 		}
-		bw.write(A+"");
+		bw.write(A + "");
 		bw.flush();
 		br.close();
 		bw.close();
-
 	}
 }
