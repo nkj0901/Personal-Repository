@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="0714/src"/>
+	<classpathentry kind="src" path="0715/src"/>
+	<classpathentry kind="src" path="0719/src"/>
+	<classpathentry kind="src" path="0722/src"/>
+	<classpathentry kind="src" path="0726/src"/>
+	<classpathentry kind="src" path="0728/src"/>
+	<classpathentry kind="src" path="0809/src"/>
+	<classpathentry kind="src" path="0811/src"/>
+	<classpathentry kind="src" path="0812/src"/>
+	<classpathentry kind="src" path="서블릿/back01_hello/src"/>
+	<classpathentry kind="src" path="서블릿/back02_servlet/src"/>
+	<classpathentry kind="src" path="서블릿/Back03_JSP/src"/>
+	<classpathentry kind="src" path="일타싸피/src"/>
+	<classpathentry kind="src" path="DB/Back06_JDBC/src"/>
+	<classpathentry kind="src" path="DB/Back07_JDBC_Web/src"/>
+	<classpathentry kind="src" path="EL, JSTL/0906_EL_JSTL/src"/>
+	<classpathentry kind="src" path="EL, JSTL/login/src"/>
+	<classpathentry kind="src" path="EL, JSTL/src"/>
+	<classpathentry kind="src" path="gson/src"/>
+	<classpathentry kind="src" path="Ssafit/src"/>
+	<classpathentry kind="src" path="SWEA/src"/>
+	<classpathentry kind="lib" path="DB/Back06_JDBC/lib/mysql-connector-java-8.0.21.jar"/>
+	<classpathentry kind="lib" path="DB/Back07_JDBC_Web/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="DB/Back07_JDBC_Web/WebContent/WEB-INF/lib/mysql-connector-java-8.0.21.jar"/>
+	<classpathentry kind="lib" path="Ssafit/bin/gson-2.8.9.jar"/>
+	<classpathentry kind="output" path="0714/bin"/>
+</classpath>
