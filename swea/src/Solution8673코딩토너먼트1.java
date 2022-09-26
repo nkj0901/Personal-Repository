@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class Solution8673코딩토너먼트1 {
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws NumberFormatException, IOException { 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
@@ -18,7 +18,7 @@ public class Solution8673코딩토너먼트1 {
 		for(int t = 1; t <= T; t++) {
 			int n = Integer.parseInt(br.readLine());
 			
-			//2의 n 제곱만큼의 리스트 만들기
+			//2의 n 제곱 구하기
 			int npow = (int) Math.pow(2,n);
 			List<Integer> list = new ArrayList<>();
 			
