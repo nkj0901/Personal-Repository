@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>영화정보사이트</title>
+</head>
+<body>
+	<!-- 메인화면을 구현하세요. -->
+	<form action="/main" method = "POST">
+	<input type = "hidden" name = "action" value = "regist">
+	<h1>SSAFY 영화 관리</h1>
+		<fieldset>
+			<legend>영화 정보 입력</legend>
+			<label>제목</label> 
+			<input type = "text" name = "title"><br>
+			<label>감독</label>
+			<input type = "text" name = "director"><br>
+			<label>장르</label>
+			<input type = "text" name = "gerne"><br>
+			<label>상영 시간</label>
+			<input type = "text" name = "runningTime"><br>
+			<button>등록</button>
+			<button>초기화</button>
+		</fieldset>
+	</form>
+</body>
+</html>
+
