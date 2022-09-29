@@ -60,10 +60,10 @@ public class Solution3124최소스패닝_우선순위프림 {
 			
 			pq.addAll(adjList[0]);
 
-			int pick = 1; //고른 정점 개수
-			int ans = 0;
+			int pick = 0; //고른 정점 개수
+			long ans = 0;
 			
-			while(pick != V) {
+			while(!pq.isEmpty()) {
 				Edge edge = pq.poll();
 				if(visited[edge.ed])continue;
 				
