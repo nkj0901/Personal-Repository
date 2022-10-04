@@ -21,39 +21,59 @@ public class Solution1240단순이진암호코드 {
 		for (int t = 1; t <= T; t++) {
 
 			st = new StringTokenizer(br.readLine());
-			int N = Integer.parseInt(st.nextToken());
-			int M = Integer.parseInt(st.nextToken());
-			int[] ansArr = new int[7];
+			int N = Integer.parseInt(st.nextToken()); //행
+			int M = Integer.parseInt(st.nextToken()); //열
+			int[] ansArr = new int[8]; //나온 암호 저장
 
 			// 숫자 1이 포함된 줄이 나올 때까지 와일문을 돌린다.
-			String str = "";
+			String str = ""; // 일단 문자열받고
+			String tmp = ""; // 1있으면 여기 저장
 			for (int i = 0; i < N; i++) {
-				str = br.readLine();
-				if (str.contains("1"))
-					break;
+				tmp = br.readLine();
+				if (tmp.contains("1"))
+					str = tmp;
 			}
-			System.out.println(str.contains("1"));
-			System.out.println(str);
-			char[] arr = str.toCharArray();
 
-			int cnt = 0; // 여태 나온 수의 숫자
+			// 뒤에서 부터 보면서 1일 나오는지 보기
+			int idx = 7;
 			for (int i = str.length() - 1; i >= 0; i--) {
-				String tmp = "";
-				if (arr[i] == '1') {
-						for (int j = i-6; j >= i; j++) {
-							tmp += str.charAt(i - j);
-							System.out.print(str);
+
+				if (str.charAt(i) == '1') {
+					// 1을 발견한 곳부터 암호 8개 연속으로 뽑아야 하니까
+					for (int s = 0; s < 8; s++) {
+						String tmp1 = "";
+						for (int j = i - 6; j <= i; j++) {
+							tmp1 += str.charAt(j);
 						}
 						for (int j = 0; j < 10; j++) {
-							if (tmp.equals(code[j])) {
-								ansArr[cnt++] = j;
+							if (tmp1.equals(code[j])) {
+								ansArr[idx--] = j;
+							}
 						}
-						i-=7;
+						i -= 7;
 					}
-					System.out.println();
 				}
 			}
-			System.out.println(Arrays.toString(ansArr));
+			int ans = 0;
+			int ans1 = 0; // 일단, 짝수 홀수 합을 구해
+			int ans2 = 0;
+			for (int i = 0; i < 8; i++) {
+				if (i % 2 == 0) { // 배열이 0부터 시작이니까 짝수인덱스가 홀수번째 수야..
+					ans1 += ansArr[i];
+				} else {
+					ans2 += ansArr[i];
+				}
+			}
+			
+			//홀수자리합*3+짝수자리합이 10으로 나눠지면 자리수 다 더해서 답출력 아니면 0출력
+			if ((ans1 * 3 + ans2) % 10 == 0) {
+				for (int i = 0; i < 8; i++) {
+					ans += ansArr[i];
+				}
+			} else {
+				ans = 0;
+			}
+			System.out.println("#" + t + " " + ans);
 		}
 	}
 }
