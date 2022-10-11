@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- 설정파일에서 bean등록과 의존관계를 설정하는 것이 아니라,
+자바코드의 annotation을 읽음으로써 설정 처리 -->
+
+<!-- component-scan : 지정된 패키지에서 낙인이 찍힌 클래스를 모두  bean으로 등록한다. -->
+<context:component-scan base-package="com.ssafy.spring"/>
+
+</beans>
