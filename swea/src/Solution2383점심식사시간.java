@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-=======
-package swea;
->>>>>>> 1c78889994283d6f82d378b096fd3e0549fada3f
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
