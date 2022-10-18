@@ -61,9 +61,14 @@ public class MyController {
 	}
 	
 	@PostMapping("test4")
-	public String test4(Model model, User user) {
+	public String test4( User user) {
 		System.out.println(user);
 		
 		return "test4";
+	}
+	
+	@RequestMapping("test8")
+	public void handler8(Model model) {
+		model.addAttribute("msg", "안녕");
 	}
 }
