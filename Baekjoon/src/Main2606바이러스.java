@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main11724연결요소개수 {
+public class Main2606바이러스 {
 
 	static class Node {
 		int s, e;
@@ -21,10 +21,8 @@ public class Main11724연결요소개수 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 
-		st = new StringTokenizer(br.readLine());
-
-		int N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(br.readLine());
+		int M = Integer.parseInt(br.readLine());
 
 		list = new ArrayList[N + 1];
 		check = new boolean[N + 1];
@@ -42,25 +40,24 @@ public class Main11724연결요소개수 {
 			list[e].add(new Node(e, s));
 		}
 		
-		int ans = 0;
-		for (int i = 1; i <= N; i++) {
-			if (!check[i]) {
-				ans++;
-				dfs(i);
-			}
-		}
+		ans = 0;
+		check[1] = true;
+		dfs(1);
+
 		System.out.println(ans);
 	}
 
 	static List<Node>[] list;
 	static boolean[] check;
+	static int ans;
 
 	private static void dfs(int n) {
 		for (int i = 0; i < list[n].size(); i++) {
 			int tmp = list[n].get(i).e;
-			if(!check[tmp]) {
-			check[tmp]=true;
-			dfs(tmp);
+			if (!check[tmp]) {
+				check[tmp] = true;
+				ans++;
+				dfs(tmp);
 			}
 		}
 	}
