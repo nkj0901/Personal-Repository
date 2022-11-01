@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <div>{{count}}</div>
+        <button @click="count++">증가</button>
+    </div>
+    <div>{{count}}</div>
+    
+</body>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data() {
+            return{
+               count : 0,
+            };
+        },
+        beforeCreate() {
+            console.log('beforeCreate count : ' + this.count);
+        },
+        created() {
+            console.log('created count : ' + this.count);
+            console.log('created에 연결된 DOM : ' + this.$el);
+        },
+        beforMount(){
+            console.log('beforMount count : ' + this.count);
+            console.log('beforMount에 연결된 DOM : ' + this.$el);
+        },
+        mounted(){
+            console.log('mounted count : ' + this.count);
+            console.log('mounted에 연결된 DOM : ' + this.$el);
+        },
+        beforeUpdate(){
+            console.log('beforeUpdate 호출');
+        },
+        updated(){
+            console.log('Update 호출');
+            console.log('Update 호출 : ' + this.count);
+        }
+
+    }); 
+</script>
+</html>
