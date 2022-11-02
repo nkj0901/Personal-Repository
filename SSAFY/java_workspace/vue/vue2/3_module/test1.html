@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model.number="num1">
+    <select v-model="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+    </select>    
+    <input type="text" v-model.number="num2">
+    <button @click="doCal">게산</button>
+    <div>{{result}}</div>
+
+    <script type="module" src="./test1.js"></script>
+
+
+  </div>  
+</body>
+</html>

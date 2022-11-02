@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+  <div id="app"> 
+    <my-comp></my-comp>
+  </div>
+           
+    <template id = "mycomponent">
+      <h2>{{msg}}</h2> 
+    </template>  
+  
+<script>
+  //컴포넌트에서 객체형태로 data를 사용하며 안된다.
+  //새로운 객체가 만들어지는 것이 아니라 공유하는 것이기 때문
+  // Vue.component('my-comp', {
+  //   template: '#mycomponent',
+  //   data: {
+  //     msg: "hello"
+  //   }
+  // })
+
+  Vue.component('my-comp', {
+    template: '#mycomponent',
+    data() {
+      return{
+        msg: "hello"
+      }
+    }
+  })
+    const app = new Vue({
+        el: '#app',    
+    })
+
+</script>
+</body>
+</html>

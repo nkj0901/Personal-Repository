@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click ="greet('하위')">인사</button>
+        <button v-on:click ="greet2($event,'하위')">인사2</button>
+    </div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+            greet(msg) {
+                alert(`Hello ${msg}`)
+                console.log(event.target)
+            },
+            greet2(e, msg) {
+                alert(`Hello ${msg}`)
+                console.log(e)
+            }
+        },
+    })
+
+</script>
+</body>
+</html>

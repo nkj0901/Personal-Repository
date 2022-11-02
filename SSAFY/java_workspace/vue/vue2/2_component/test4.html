@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+  <div id="app"> 
+    <count-view></count-view>
+    <count-view></count-view>
+  </div>
+           
+    <template id = "count-view">
+      <div>
+      <span>{{count}}</span> 
+      <button @click="count++">클릭</button>
+      </div>
+    </template>  
+  
+<script>
+  //컴포넌트에서 객체형태로 data를 사용하며 안된다.
+  //새로운 객체가 만들어지는 것이 아니라 공유하는 것이기 때문
+  // Vue.component('my-comp', {
+  //   template: '#mycomponent',
+  //   data: {
+  //     msg: "hello"
+  //   }
+  // })
+  let data = {
+    count: 0,
+  }
+
+  Vue.component('count-view', {
+    template: '#count-view',
+    data() {
+      return data
+    },
+  })
+    const app = new Vue({
+        el: '#app',    
+    })
+
+</script>
+</body>
+</html>
