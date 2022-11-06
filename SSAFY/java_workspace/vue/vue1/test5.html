@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 보간법을 써보겠다. -->
+    <div id="app">
+        <!-- 콧수염 방식 -->
+        <h2>{{msg}}</h2>
+        <!-- v-once : 역할 -> 값이 바뀌지 않음 -->
+        <h2 v-once>{{msg}}</h2>
+    </div>
+    
+</body>
+<script>
+    //HTML 요소를 직접 넣겠다
+    //뷰 객체 생성 먼저
+    const app = new Vue({
+
+        el: '#app',
+        data() {
+            return{
+                msg: '대전 4반 남기정'
+            }
+        },
+
+    });
+
+
+
+    
+
+
+
+</script>
+</html>

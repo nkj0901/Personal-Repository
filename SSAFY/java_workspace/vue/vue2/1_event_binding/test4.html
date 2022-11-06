@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+    <div id="app">
+       <h2>페이지이동</h2>
+       <a href = "test3.html" @click="sendMsg1">페이지 이동막기1</a>
+       <a href = "test3.html" @click="sendMsg2">페이지 이동막기2</a>
+       <a href = "test3.html" @click.prevent="sendMsg1">페이지 이동막기3</a>
+    </div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+            sendMsg1() {
+                alert('막아')
+            },
+            sendMsg2() {
+                event.preventDefault()
+                alert('막아')
+            },
+        },
+    })
+
+</script>
+</body>
+</html>

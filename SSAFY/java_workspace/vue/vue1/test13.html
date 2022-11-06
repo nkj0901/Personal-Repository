@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{count}}</h2>
+        <!-- 함수를 여기다가 쓰면 매우 복잡해질 수가 있어요-->
+        <!-- 따로 빼서 쓰자고 -->
+        <!-- <button v-on:click="count++">누르면증가</button> -->
+        <button v-on:click="count++">누르면증가1</button>
+        <button v-on:click="plus">누르면증가2</button>
+        <button @click="plus">누르면증가3</button>
+    </div>
+    
+</body>
+<script>
+    //HTML 요소를 직접 넣겠다
+    //뷰 객체 생성 먼저
+    const app = new Vue({
+
+        el: '#app',
+        data() {
+            return{
+               count: 1,
+                
+            };
+        },
+        methods: {
+            plus() {
+                this.count++;
+                console.log("메서드 실행이야!!!");
+            },
+        },
+    });
+</script>
+</html>

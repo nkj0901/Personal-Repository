@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+  <div id="app">
+    <my-global></my-global>
+    <my-global></my-global>
+  </div>
+  <div id="app2">
+    <my-global></my-global>
+  </div>
+<script>
+    //MyGlobal이라는 이름으로 template(전역 컴포넌트)이 등록됨
+    Vue.component('MyGlobal', {
+        template: '<h2>전역 컴포넌트</h2>'
+    })
+    const app = new Vue({
+        el: '#app',
+        data: {
+         
+         },
+    })
+    const app2 = new Vue({
+        el: '#app2',
+        data: {
+         
+         },
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h2>숫자를 돌려본다.</h2>
+            <span v-for="i in 10">{{i}}</span>
+        </div>
+        <div>
+            <h2>문자배열을 돌려본다.</h2>
+            <ul>
+                <li v-for="name in names">{{name}}</li>
+            </ul>
+        </div>
+        <div>
+            <h2>문자배열을 돌려본다.</h2>
+            <ol>
+                <!-- 순서가 중요하다 -->
+                <li v-for="(name, index) in names">{{index+1}}:{{name}}</li>
+            </ol>
+        </div>
+        <div>
+            <h2>객체배열을 돌려본다.</h2>
+            <ol>
+                <!-- 순서가 중요하다 -->
+                <li v-for="human in humans">{{human.name}}:{{human.age}}세</li>
+            </ol>
+        </div>
+    </div>
+    
+</body>
+<script>
+    //HTML 요소를 직접 넣겠다
+    //뷰 객체 생성 먼저
+    const app = new Vue({
+
+        el: '#app',
+        data() {
+            return{
+                age: 10,
+                names: [
+                    "김동현", "김민규", "이해건", "이지우", "손종효", "이상훈"
+                ],
+                humans : [
+                    {
+                        name: "김동현",
+                        age: 6
+                    },
+                    {
+                        name: "김민규",
+                        age: 29
+                    },
+                    {
+                        name: "남기정",
+                        age: 3
+                    },
+                ]
+            };
+        },
+    });
+
+
+
+    
+
+
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 값이 false이면 display 속성 값이 none이 됨 -->
+        <h1 v-show="ok">Hello</h1>
+        <input type="text" v-model="msg"/>
+        <button v-show="msg.trim().length !== 0">검색</button>
+    </div>
+    
+</body>
+<script>
+    //HTML 요소를 직접 넣겠다
+    //뷰 객체 생성 먼저
+    const app = new Vue({
+
+        el: '#app',
+        data() {
+            return{
+                ok: true,
+                msg: 'hello',
+            };
+        },
+    });
+
+
+
+    
+
+
+
+</script>
+</html>

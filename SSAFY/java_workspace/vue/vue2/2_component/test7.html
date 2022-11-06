@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+  <div id="app"> 
+    <h2>부모 컨포넌트</h2>
+    <child-view v-for="area in areas" :area="area" :msg="msg[parseInt(Math.random()*5)]"></child-view> 
+
+  </div>
+           
+    <template id = "child-view">
+      <div>
+      <span>{{area}}지역 컴포넌트</span> 
+      <div>{{msg}}</div>
+      </div>
+    </template>  
+  
+<script>
+  
+  Vue.component('child-view', {
+    template: '#child-view',
+    props: [
+      'area', 'msg'
+    ],
+  })
+    const app = new Vue({
+        el: '#app',
+        data() {
+          return{
+            areas : ['서울', '대전', '광주', '구미', '부울경'],
+            msg: ['좋네요', '난 잘생겼다.', '나는 행복해', '배가 너무 아프다', '화이팅하자']
+          }
+        }    
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+  <div id="app"> 
+    <h2>부모 컨포넌트</h2>
+    <button @click="doAction">send</button>
+  </div>
+ 
+  
+<script> 
+    const app = new Vue({
+        el: '#app',
+        data() {
+          return{          
+          }
+        },
+        methods: {
+          doAction() {
+            this.$emit('sendMsg', '안녕하세요...')
+          },
+        },
+        created() {
+            this.$on('sendMsg', (msg) => {
+              alert(msg)
+            })
+          }       
+    })
+
+</script>
+</body>
+</html>
