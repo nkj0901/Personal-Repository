@@ -11,6 +11,10 @@
           이메일 수신동의
           <input type="checkbox" v-model="email">  
         </div>
+        <div>
+            로봇인가요?
+            <input type="checkbox" v-model="robot" true-value="Y" false-value="N">
+        </div>
     </div>
 <script>
     const app = new Vue({

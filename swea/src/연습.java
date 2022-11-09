@@ -1,86 +1,70 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class 연습 {
-	
-	static class Node implements Comparable<Node>{
-		int r, c, w;
-		
-		Node(int r, int c, int w){
-			this.r = r;
-			this.c = c;
-			this.w = w;
-		}
 
-		@Override
-		public int compareTo(Node o) {
-			return this.w-o.w;
-		}
-	}
-	
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		StringTokenizer st;
+    static char[] arr;
+    static int[] check;
+    static int l, c;
 
-		int T = Integer.parseInt(br.readLine());
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		for (int t = 1; t <= T; t++) {
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        l = Integer.parseInt(st.nextToken());
+        c = Integer.parseInt(st.nextToken());
+        arr = new char[c];
+        check = new int[c];
 
-			int N = Integer.parseInt(br.readLine());
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; st.hasMoreTokens(); i++) {
+            arr[i] = st.nextToken().charAt(0);
+        }
 
-			int[][] map = new int[N][N];
-			int[][] dist = new int[N][N];
-			boolean[][] visited = new boolean[N][N];
+        Arrays.sort(arr);
 
-			for (int i = 0; i < N; i++) {
-				String str = br.readLine();
-				for (int j = 0; j < N; j++) {
-					map[i][j] = str.charAt(j)-'0';
-				}
-			}
-			
-			for (int[] d : dist) {
-				Arrays.fill(d, Integer.MAX_VALUE);
-			}
-			
-			PriorityQueue<Node> pq = new PriorityQueue<>();
-			int[] dr = {-1, 0, 1, 0};
-			int[] dc = {0, 1, 0, -1};
-			pq.add(new Node(0,0,0));
-			
-			while(!pq.isEmpty()) {
-				Node n = pq.poll();
-				
-				if(visited[n.r][n.c])continue;
-				visited[n.r][n.c] = true;
-				
-				for(int d = 0; d < 4; d++) {
-					int nr = n.r + dr[d];
-					int nc = n.c + dc[d];
-					
-					if(nr < 0 || nc < 0 || nr >= N || nc >= N) continue;
-					
-					if(dist[nr][nc] > n.w+map[nr][nc]) {
-						dist[nr][nc] = n.w+map[nr][nc];
-						
-						pq.add(new Node(nr, nc, dist[nr][nc]));
-					}
-				}
-			}
-			
-			
-			int ans = dist[N-1][N-1];
-			bw.write("#" + t + " " + ans + "\n");
-		}
-		bw.flush();
-		br.close();
-		bw.close();
-	}
+        dfs(0, 0);
+
+        br.close();
+    }
+
+    public static void dfs(int level, int length) {
+        if(length == l) {
+            StringBuilder sb = new StringBuilder();
+            int vowel = 0;
+            int consonant = 0;
+
+            for (int i = 0 ; i < c; i++) {
+                if (check[i] == 1) {
+                    if (isVowel(arr[i])) {
+                        vowel++;
+                    } else {
+                        consonant++;
+                    }
+
+                    sb.append(arr[i]);
+                }
+            }
+
+            if (vowel >= 1 && consonant >= 2) {
+                System.out.println(sb);
+            }
+
+        } else {
+            for (int i = level; i < c; i++) {
+                check[i] = 1;
+                dfs(i+1, length+1);
+                check[i] = 0;
+            }
+        }
+    }
+
+    public static boolean isVowel(char c) {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
