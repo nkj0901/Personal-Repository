@@ -1,9 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\multicampus\Desktop\대전_4반_남기정\Personal-Repository\SSAFY\서블릿\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3789802206.index
-\back_db_ws_02_3\src
-C:\Users\multicampus\Desktop\대전_4반_남기정\Personal-Repository\SSAFY\서블릿\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\101301709.index
-\Back03_JSP\src
-C:\Users\multicampus\Desktop\대전_4반_남기정\Personal-Repository\SSAFY\서블릿\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2051442353.index
-\back_db_ws_02_2\src
-C:\Users\multicampus\Desktop\대전_4반_남기정\Personal-Repository\SSAFY\서블릿\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2268494670.index
-\Back03_JSP\src
