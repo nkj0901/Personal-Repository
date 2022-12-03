@@ -1,13 +1,15 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class 연습 {
-	public static void main(String[] args) throws Exception {
+public class Main17471게리맨더링 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 
@@ -42,8 +44,7 @@ public class 연습 {
 		check = new boolean[N];
 		min = Integer.MAX_VALUE;
 		Combi(0);
-		if (min == Integer.MAX_VALUE)
-			min = -1;
+		if(min == Integer.MAX_VALUE) min = -1;
 		System.out.println(min);
 	}
 
@@ -72,15 +73,13 @@ public class 연습 {
 	private static void Count() {
 		int t = 0;
 		int f = 0;
-
-		for (int i = 0; i < N; i++) {
-			if (check[i])
-				t += p[i];
-			else
-				f += p[i];
+		
+		for(int i = 0; i < N; i++) {
+			if(check[i]) t+=p[i];
+			else f+=p[i];
 		}
-
-		min = Math.min(min, Math.abs(t - f));
+		
+		min = Math.min(min, Math.abs(t-f));
 	}
 
 	private static boolean Linked() {
@@ -99,13 +98,14 @@ public class 연습 {
 		Queue<Integer> queue = new LinkedList<Integer>();
 
 		queue.add(t.get(0));
+		int count = 0;
 		boolean[] check2 = new boolean[N];
 
 		while (!queue.isEmpty()) {
 			int n = queue.poll();
-			if (check2[n])
-				continue;
+			if(check2[n]) continue;
 			check2[n] = true;
+			count++;
 
 			for (int i = 0; i < adjList[n].size(); i++) {
 				if (check[adjList[n].get(i)]) {
@@ -113,13 +113,17 @@ public class 연습 {
 				}
 			}
 		}
-
+		if(count != t.size()) return false;
+		
 		queue.add(f.get(0));
+		count = 0;
+		check2 = new boolean[N];
+
 		while (!queue.isEmpty()) {
 			int n = queue.poll();
-			if (check2[n])
-				continue;
+			if(check2[n]) continue;
 			check2[n] = true;
+			count++;
 
 			for (int i = 0; i < adjList[n].size(); i++) {
 				if (check[adjList[n].get(i)] == false) {
@@ -127,13 +131,9 @@ public class 연습 {
 				}
 			}
 		}
-
-		for (int i = 0; i < N; i++) {
-			if (!check2[i]) {
-				return false;
-			}
-		}
+		if(count != f.size()) return false;
 		return true;
 	}
-
 }
+
+//https://data-make.tistory.com/501
