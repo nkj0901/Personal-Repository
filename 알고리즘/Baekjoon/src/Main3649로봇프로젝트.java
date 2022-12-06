@@ -16,29 +16,45 @@ public class Main3649로봇프로젝트 {
 			int n = Integer.parseInt(br.readLine());
 			int[] arr = new int[n];
 
+			// 값을 입력받고 배열 정렬
 			for (int i = 0; i < n; i++) {
 				arr[i] = Integer.parseInt(br.readLine());
 			}
 			Arrays.sort(arr);
 			
-			int max = Integer.MIN_VALUE;
-			int ans1 = 0;
-			int ans2 = 0;
-			for (int i = 0; i < n-1 ; i++) {
-				for (int j = i + 1; j < n; j++) {
-					if(arr[i]+arr[j] == x) {
-						if( max < Math.abs(arr[i]-arr[j])) {
-							ans1 = arr[i];
-							ans2 = arr[j];
-							max = Math.abs(arr[i]-arr[j]);
-						}
-					}
+			//Two pointer로 쓰일 두 개의 변수
+			int start = 0;
+			int end = n-1;
+			
+			//답이 있는지 없는지 알려줄 아이
+			boolean flag = true;
+			
+			while(true) {
+				
+				//시작점과 끝점이 교차하면 멈춰라... 답이 없다.
+				if(start>=end) {
+					flag = false;
+					break;
 				}
+				
+				int sum = arr[start] + arr[end]; 
+				
+				//값이 크면 end를 줄여서 값을 작게 만들어보자
+				if(sum > x) {
+					end--;
+				} // 값이 작으면  start를 늘려서 값을 크게 만들어보자
+				else if (sum < x) {
+					start++;
+				} // 값이 같으면 게임 끝~! 
+				else {
+					break;
+				}
+				
 			}
-			if( max == Integer.MIN_VALUE) {
-				System.out.println("danger");
+			if(flag ) {
+				System.out.println("yes " + arr[start] + " " + arr[end]);
 			} else {
-				System.out.println("yes " + ans1 + " " + ans2);
+				System.out.println("danger");
 			}
 		}
 	}
