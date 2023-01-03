@@ -9,8 +9,8 @@ public class Main14658하늘에서별똥별이빗발친다 {
 		StringTokenizer st;
 
 		st = new StringTokenizer(br.readLine());
-		N = Integer.parseInt(st.nextToken());
-		M = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
 		L = Integer.parseInt(st.nextToken());
 		K = Integer.parseInt(st.nextToken());
 
@@ -22,34 +22,28 @@ public class Main14658하늘에서별똥별이빗발친다 {
 			arr[i][0] = Integer.parseInt(st.nextToken());
 			arr[i][1] = Integer.parseInt(st.nextToken());
 		}
-
-		int max = 0;
-		// K의 경우의 수를 볼 것
-		for (int k = 0; k < K; k++) {
-			for (int i = 0; i < K; i++) {
-				// k의 x를 기준으로 했을 때
-				max = Math.max(max, xCount(arr[k][0]));
-				// k의 y를 기준으로 했을 때
-				max = Math.max(max, yCount(arr[k][1]));
+		
+		max = 0;
+		// k를  x로
+		for(int k = 0; k < K; k++) {
+			//i를 y로
+			for(int i = 0; i < K; i++) {
+				cnt = 0;
+				count(arr[k][0], arr[i][1]);
 			}
 		}
-		System.out.println(max);
+		System.out.println(K-max);
 	}
-
-	static int N, M, L, K;
+	
+	static int cnt, max, L, K;
 	static int[][] arr;
 
-	private static int xCount(int x) {
-		int max = 0;
-		//범위 설정 i~i+L-1
-		for (int i = 0; i <= N - L; i++) {
-			int cnt = 0;			
-			//k개의 아이중에 범위 안에 들어가는 애들이 몇개인지 보기
-			for (int k = 0; k < K; k++) {
-				if ((arr[k][0] >= x && arr[k][0] < x+L) && (arr[k][1] < i + L && arr[k][1] >= i)) cnt++;
-			}
-			max = Math.max(max, cnt);
+	private static void count(int x, int y) {
+		for(int i = 0; i < K; i++) {
+			//모서리에 닿아도 튕겨져 나가므로 x+L까지의 경우를 보아야 한다.
+			if(arr[i][0] >= x && arr[i][0] <= x+L && arr[i][1] >= y && arr[i][1] <= y+L) cnt++;
 		}
-		return max;
+		max = Math.max(max, cnt);
 	}
+
 }
