@@ -4,57 +4,112 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cd48e2-1c81-42b2-ad73-806412d10cd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/babel.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/src/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baekjoon.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1522문자열교환.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main17615볼모으기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main20437문자열게임2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2531회전초밥.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2531회전초밥_set.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/Main222333ddd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
+    <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Main14719빗물.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main16234인구인동.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main9655돌게임.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baekjoon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2KAKdO8Pv40vO4DZM8C56YCj8g5" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KES9g8NRGjOHulM5zevR4SnHD6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SSAFY/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/실습코드/FRONT/noom-master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.Main14719빗물">
+    <configuration name="Main14719빗물" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main14719빗물" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main16234인구인동" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main16234인구인동" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main16234인구인동" />
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Main14719빗물" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main14719빗물" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="06cd48e2-1c81-42b2-ad73-806412d10cd2" name="Changes" comment="" />
-      <created>1673412044009</created>
+      <changelist id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="" />
+      <created>1673538099925</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673412044009</updated>
-      <workItem from="1673412045157" duration="2011000" />
+      <updated>1673538099925</updated>
+      <workItem from="1673538101121" duration="136000" />
+      <workItem from="1673538258892" duration="417000" />
+      <workItem from="1673568775711" duration="124000" />
+      <workItem from="1673568907748" duration="1816000" />
+      <workItem from="1673598676651" duration="1152000" />
+      <workItem from="1673607364166" duration="272000" />
+      <workItem from="1673607648660" duration="4020000" />
+      <workItem from="1673763332581" duration="8000" />
+      <workItem from="1673767354064" duration="6000" />
+      <workItem from="1673789557327" duration="5653000" />
+      <workItem from="1673856846094" duration="2000" />
+      <workItem from="1673857901094" duration="642000" />
+      <workItem from="1673932722650" duration="59000" />
+      <workItem from="1673965180028" duration="4000" />
+      <workItem from="1673965407061" duration="3000" />
     </task>
     <servers />
   </component>
