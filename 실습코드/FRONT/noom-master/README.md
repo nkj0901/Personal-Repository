@@ -2,6 +2,7 @@
 ### Zoom Clone using NodeJS, WebRTC and Websockets.  
 
 # 환경설정
+___
 ## 1. Babel, Nodemon, Express를 활용해서 Node.js프로젝트를 설정  
 ___
 
@@ -30,7 +31,7 @@ ___
     (babel 자체로는 아무것도 안함, plugin이 컴파일, 매번 plugin 패키지 설치, .babelrc에 더하는 것이 귀찮, preset으로 plugin 그룹 한번에 설치
     공식 preset 사용 (@bable/core))
 
-
+___
 ## 2. static 파일과 유저에게 가게 될 파일만들기  
 ___
     webPack은 사용하지 않고 자바스크립트를 유저한테 보내고 그걸 브라우저가 이해할 수 있도록 만들 것
@@ -46,7 +47,7 @@ ___
 7. app.js에서는 FrontEnd에서 구동, server.js는 BackEnd에서 구동
 8. public 폴더는 유저들에게 공개하는 것들(보안상으로 안좋을 수 있으니 볼 수 있는 파일을 정해줘야 한다.)
 
-
+___
 ## 3. WebSocket
 ___
 
@@ -71,7 +72,7 @@ ___
 5. import WebSocket from "ws"; 임포트 후, const wss = new WebSocket.Server(); 괄호 안에 굳이 server를 넣지 않아도 됨
 6. 이제 http 서버와 webSocket 서버를 둘 다 돌릴 수 있다. http 서버가 필요없다면 안 만들어도 된다. 여기서는 2개가 같은 port에 있길 원하기 때문에, 이렇게 함. http 서버 위에 ws서버를 만들기 위함.  
 
-
+____
 ## 4. 환경설정은 모두 끝!!! 첫번째 connection을 만들자
 ___
     ws를 사용해서 back-end와 front-end를 연결. 연결하는데는 추가적인 것의 설치가 필요하지 않다. 브라우저가 해줌(IE, 모바일에서도 가능)  
@@ -109,7 +110,7 @@ ___
 
 백엔드와 프론트가 통신할 때 왜 String을 써야 하는걸까?
 - 하나의 언어에 종속적이면 안되기 때문에...
-
+____
 ## 5. 모든 것을 간편하게 만들어줄 framework(SocketIO)를 사용해보자.
 ___
     참고 https://socket.io/docs/v4/
@@ -132,10 +133,9 @@ const wss = new WebSocket.Server({ server });를 const io = SocketIO(server);으
 4. 이전에는 브라우저가 주는 websocket API를 사용하면 되어 아무것도 설치해줄 필요가 없었는데, SoketIO는 더 많은 기능을 주기 때문에 호환이 안됨
                 5. io는 자동적으로 back-end socket.io와 연결해주는 function이다. 그렇기 때문에 <app.js>에서 socket 연결하는 방법은 const socket = io(); 하면 끝. io function은 알아서 socket.io를 실행하고 있는 서버를 찾는다.
 
-
+___
 ## 6. 이제는 public chat이 아니라 room을 만들어서 채팅을 하도록 만들거다.
 ___
-
 
     socket io에는 이미 room 기능이 있음.  
     방을 만드는 것과 방에 들어가는 것은 차이가 없다.
@@ -161,4 +161,164 @@ back-end는 front-end의 함수를 실행해서는 안된다. 그렇게 된다�
 12. wsServer.sockets.emit("hi", "everyone"); 모든 사람에게 메시지를 보낼 수 있음
 13. wsServer.socketsJoin("room"); 강제로 참여하게 할 수 있다.
 14. wsServer.in("room").socketsJoin(["room2", "room3"]); room에 있는 모든 사람을 room2, room3에 들어가게 할 수도 있다.
+____
+## 7. Adapter에 대해 알아보자
+___
+    Adapter가 기본적으로 하는 일은 다른 서버들 사이에 실시간 어플리케이션 동기화를 하는 것.
+
+    connection이 많아지면 여러 개의 서버를 만들게 될 것이다. 서버들은 각각의 Memory를 가지고 있어서 다른 서버에 있는 memory에 접근할 수 없다.   
+    -> Adapter는 DBMS를 사용해서 서버간의 통신을 해준다.
+    Adapter에서는 모든 memory의 정보를 볼 수 있다.
+
+Adapter는 누가 연결되었는지, 현재 어플리케이션에 room이 얼마나 있는지 알려줄거다.
+wsServer.sockets.adapter<BE>
+
+Adapter에서 확인할 수 있는 것
+1. rooms id(rooms)
+2. socket id들(sids)
+
+const sids = wsServer.sockets.adapter.sids;
+const rooms = wsServer.sockets.adapter.rooms;
+
+Public Room 찾기
+rooms id를 socket id에서 찾을 수 없다면, 우리는 Public room을 찾은 것.
+rooms id와 socket id 정보는 map으로 되어 있다.
+rooms.forEach((_, key) => { if(sids.get(key) === undefined){ console.log(key)})
+
+연결된 모든 소켓에게 메시지 보내기<BE>
+wsServer.sockets.emit("room_change", publicRooms());
+한 명에게만 보내기<BE>
+socket.to(roomName).emit("welcome", socket.nickname);
+
+<FE>
+socket.on("room_change", console.log);
+
+disconecting event는 socket이 방을 떠나기 바로 직전에 발생한다.
+disconnect는 연결이 끊어졌을 때.
+
+방에 몇명있는지 알아보기<BE>
+wsServer.sockets.adapter.rooms.get(roomName)?.size;
+___
+## 8. Admin UI
+___
+클라이언트와 서버상태를 볼 수 있음.
+프라이빗룸, 퍼플릭룸, 서버 상태를 볼 수 있음.
+instrument를 import해주고 server를 만들었던 방식을 약간 수정해준다.
+
+1. npm i @socket.io/admin-ui
+2. <BE> const { instrument } = from "@socket.io/admin-ui";
+3. 데모가 작동하는데 필요한 환경설정
+4. instrument 설정
+```js
+const { createServer } = from "http";
+const { Server } = from "socket.io";
+const { instrument } = trom "socket.io/admin-ui";
+
+const httpServer = http.createServer(app);
+
+const wsServer = new Server(httpServer, {
+    // 데모가 작동하는 데 필요한 환경설정
+    cors: {
+        origin: ["https://admin.socket.io"];
+        credentials: true
+    }
+});
+instrument(wsServer, {
+    auth: false
+    //패스워드를 설정하려면
+    auth: {
+        type: "basic",
+        username: "admin",
+        password: "@$%DFSDFWEHG!@#FGWEFS.eWDF$$%"
+    }
+});
+```
+5. URL 마우스 오른쪽 클릭하여 private 창에서 열기
+6. Connection 창 Server URL에 서버 주소/admin
+7. path 설정해줄 필요없음.   
+
+___
+
+## 9. 비디오
+___
+
+1. 무엇보다도 먼저 유저로부터 비디오를 가져와 화면에 비디오를 보여줘야 한다.
+2. 버튼을 만들건데, 마이크를 음소거 및 음소거 해제하는 버튼 카메라를 껏다 켰다 하는 버튼, 전면 후면 카메라 전환.
+
+```js
+// <home.pug>
+video#myFace(autoplay, playsinline)
+//playsinline은 모바일에서 영상을 볼 때 필요한 프로퍼티. 핸드폰에서 영상이 전체화면으로 보여지는 것을 막음
+```
+3. <FE> const myFace = document.getElementById("myFace");
+4. stream은 오디오와 비디오가 합쳐진 것이라는 것을 주의할 것.
+Generally, you will accesss the MediaDevices singleton object using navigator.mediaDevices. 유저의 유저미디어 String을 줄거다. 클라이언트가 처음 창을 맞이하게 되면 "카메라를 사용을 허용하겠습니까?"라는 창이 보일 것이다.
+
+```js
+let myStream;
+
+async function getMedia(){
+    try {
+        myStream - await navigator.mediaDEvices.getUserMedia( //constraints를 넣는 자리. 기본적으로 우리가 무엇을 얻고 싶은지 적는 곳
+            {   
+                audio: true,
+                video: true,
+            }
+        )
+        // 이 myStream을 myFace 안에 넣어준다.
+        myFace.srcObject = myStream;
+        } catch(e){
+        console.log(e);
+    }
+}
+
+getMedia();
+```
+5. home.pug에 button 달아주기 이벤트 달아서 innerText 변경해주기
+   
+stream의 멋진 점은 우리에게 track이라는 것을 제공해준다는 것이다. 비디오, 오디오, 자막 등 다 track이 될 수 있고 상태를 바꿔줄 수 있다. 접근할 수 있음.
+
+6. 카메라 바꿔주기 기능(아래코드 참조) getMedia()함수는 비디오를 다시 시작하게 만드는 함수이다.
+
+```js
+//audio on/off
+myStream.getAudioTracks().forEach((track) => (track.enabled = !track.enabled));
+
+//video on/off
+myStream.getVideoTracks.forEach((track) => (track.enabled = !track.enabled));
+
+
+const devices = await navigator.mediaDevices.enumerateDevices();
+
+async function getCameras() {
+  try {
+    //연결된 모든 장치의 정보를 가져오기
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    //카메라 정보 가지고 오기
+    const cameras = devices.filter((device) => device.kind === "videoinput");
+    const currentCamera = myStream.getVideoTracks()[0];
+    cameras.forEach((camera) => {
+      const option = document.createElement("option");
+      option.value = camera.deviceId;
+      option.innerText = camera.label;
+      if (currentCamera.label === camera.label) {
+        option.selected = true;
+      }
+      camerasSelect.appendChild(option);
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+```
+7. 셀카와 후면카메라를 설정하는 방법
+```js
+{audio: true, video: {facingMode: {exact: "user"/"environment"}}}
+```
+
+
+
+
+
+
 

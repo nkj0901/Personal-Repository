@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main14719빗물.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main16234인구인동.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main9655돌게임.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/FRONT/zoom/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main23971ZOAC4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main5073삼각형과세변.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../실습코드/FRONT/noom-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/FRONT/noom-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../실습코드/FRONT/noom-master/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/FRONT/noom-master/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baekjoon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main14719빗물">
+  <component name="RunManager" selected="Application.Main5073삼각형과세변">
     <configuration name="Main14719빗물" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main14719빗물" />
       <module name="Baekjoon" />
@@ -70,6 +67,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main5073삼각형과세변" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main5073삼각형과세변" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="Baekjoon" />
       <method v="2">
@@ -79,10 +83,12 @@
     <list>
       <item itemvalue="Application.Main16234인구인동" />
       <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Main5073삼각형과세변" />
       <item itemvalue="Application.Main14719빗물" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main5073삼각형과세변" />
         <item itemvalue="Application.Main14719빗물" />
       </list>
     </recent_temporary>
@@ -110,6 +116,10 @@
       <workItem from="1673932722650" duration="59000" />
       <workItem from="1673965180028" duration="4000" />
       <workItem from="1673965407061" duration="3000" />
+      <workItem from="1674040743190" duration="26000" />
+      <workItem from="1674048124672" duration="797000" />
+      <workItem from="1674124392097" duration="511000" />
+      <workItem from="1674275749084" duration="24000" />
     </task>
     <servers />
   </component>
