@@ -131,7 +131,7 @@ const wss = new WebSocket.Server({ server });를 const io = SocketIO(server);으
 3. socket.io의 url은 localhost:3000/socket.io/socket.io.js <home.pug>에 script(scr=
 "/socket.io/socket.io.js"), socript(scr="/public/js/app.js")
 4. 이전에는 브라우저가 주는 websocket API를 사용하면 되어 아무것도 설치해줄 필요가 없었는데, SoketIO는 더 많은 기능을 주기 때문에 호환이 안됨
-                5. io는 자동적으로 back-end socket.io와 연결해주는 function이다. 그렇기 때문에 <app.js>에서 socket 연결하는 방법은 const socket = io(); 하면 끝. io function은 알아서 socket.io를 실행하고 있는 서버를 찾는다.
+5. io는 자동적으로 back-end socket.io와 연결해주는 function이다. 그렇기 때문에 <app.js>에서 socket 연결하는 방법은 const socket = io(); 하면 끝. io function은 알아서 socket.io를 실행하고 있는 서버를 찾는다.
 
 ___
 ## 6. 이제는 public chat이 아니라 room을 만들어서 채팅을 하도록 만들거다.
@@ -259,7 +259,8 @@ let myStream;
 
 async function getMedia(){
     try {
-        myStream - await navigator.mediaDEvices.getUserMedia( //constraints를 넣는 자리. 기본적으로 우리가 무엇을 얻고 싶은지 적는 곳
+        myStream - await navigator.mediaDevices.getUserMedia( 
+            //constraints를 넣는 자리. 기본적으로 우리가 무엇을 얻고 싶은지 적는 곳
             {   
                 audio: true,
                 video: true,
@@ -311,13 +312,252 @@ async function getCameras() {
   }
 }
 ```
-7. 셀카와 후면카메라를 설정하는 방법
+7. 셀카와 후면카메라를 설정하는 방법 / 장치를 선택하는 방법
 ```js
 {audio: true, video: {facingMode: {exact: "user"/"environment"}}}
+{video: {diviceId: myPreferredCameraDeviceId}}
 ```
 
+```js
+// getMedia할 때 인자(DeviceId)가 없을 때, 문제가 생기지 않기 위하여 initialConstrains 설정
+const initialConstrains = { 
+    audio = true,
+    video = {facingMode: "user"},
+}
 
+const cameraConstraints = {
+    audio: true,   
+    video: {deviceId: mypreferredCameraDeviceId}//이건 이 장치 없으면 다른 걸 연결해줌
+    video: {deviceId: {exact: myExactCameraOrBustDeviceId}}//이건 무조건 이 장치만 연결한다. 만약 찾지 못하면 비디오를 보여주지 않는다. 우리는 이걸 사용할 것이다.
+}
 
+```
+___
+## WebRTC
+___
+Real-Time-Communication
+
+    우리가 chat을 구현했을 때 이건 peer-to-peer이 아니었다. 이때는 서버가 메시지를 받으면 그 메시지를 사용자들에게 보내주는 역할을 했다. 서버를 언제나 사용해야 했다. p2p는 내영상과 내오디오와 내 텍스트가 서버로 가지 않는다는 뜻이다. 브라우저와 브라우저가 바로 연결된다. 우리는 서버가 필요없고, 이게 바로 '실시간(real time)'이 속다가 엄청 빠른 이유이다. webSocket은 Socket이 다른 Socket에게 바로 메시지를 전달하지 못하고 반드시 서버를 거쳐가야 한다.
+
+    webRTC는 서버가 필요하긴한데 영상이나 오디오를 전송하기 위해 필요한 것은 아니다. 서버는 signaling이란걸 하기 위해 서버가 필요하다. signaling이 끝나면 peer-to-peer 연결이 된다.
+
+    브라우저와 브라우저를 연결하려고 하는데, 브라우저가 연결하려는 사람의 ip주소를 알 수 있을까? 하나도 모름. 그래서 우리가 할 것은 브라우저로 하여금 상대가 어디 있는지 알게 해주는 것이다. 브라우저는 서버한테 configuration과 그 브라우저의 인터넷에서의 위치, settings, 방화벽이나 라우터가 있는지 등등의 정보만을 전달한다.
+
+    서버는 어떤 브라우저에게 다른 한 브라우저의 위치를 알려줄 때만 사용된다.
+
+1. welcome, call을 둘 다 있는 상태에서 숨기기만 할 것이다. 왜냐면 사용자가 먼저 room에 참가한 다음에 call을 시작하고 싶기 때문이다.
+
+먼저 따로 설정과 연결이 이뤄진다. 이후 서버를 통해서 둘을 이어줄 것이다. (socket.io를 통해서)
+
+<image src="https://www.dropbox.com/s/1y5z4jkazbkqpjo/WebRTC.PNG?dl=0">
+
+연결하는 것을 해보자.
+```js
+// app.js
+//addStream
+myPeerConnection = new RTCPeerConnection();
+myStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, myStream));
+// 브라우저들을 연결하진 않았지만, 양쪽 브라우저에서 카메라와 마이크의 데이터 Stream을 받아서 그것들을 연결 안에 집어 넣었다.
+```
+peerA는 offer(다른 사람들이 채팅방에 참여할 수 있도록 초대장을 만다는 것)을 만들어야 함. peerB는 answer을 만든다.
+PeerA는 방을 먼저 들어가는 사람
+
+```js
+// app.js (A실행)
+//createOffer
+Socket.on("welcom", async () => {
+const = offer = await myPeerConnecton.createOffer();
+//setLocalDescription offer에
+myPeerConnection.setLocalDescription(offer)
+//이제 이 offer을 peerB에게 보내자.
+socket.emit("offer", offer, roomName(어디에 보내줄 건지 알려줘야 한다.))
+})
+
+// server.js
+    socket.on("offer", (offer, roomName)) => {
+        socket.to(roomName).emit("offer", offer);
+    }
+
+// app.js(B실행)
+socket.on("offer", async(offer) => {
+    //peerA가 준 LocalDescription을 받기
+    mypeerConnection.setRemotDesription(offer);
+    const answer = await myPeerConnection.createAnswer();
+    myPeerConnection.setLocalDescription(answer);
+    socket.emit("answer", answer, roomName); //A가 보내줬던 것처럼 정보 보내주기
+})
+
+// server.js
+socket.on("answer", (answer, roomName) => {
+    socket.to(roomName).emit("answer", answer);
+});
+
+// app.js(A실행)
+socket.on("answer", answer => {
+    myPeerConnetion.setRemoteDescription(answer);
+})
+```
+
+주고 받는 것이 모두 끝나면 peer-to-peer 연결의 양쪽에서 icecandidate라는 이벤트를 실행하기 시작한다.
+ICE라는 것은 Internet Connectivity Establishment(인터넷 연결 생성)   
+IceCandidate는 webRTC에 필요한 프로토콜들을 의미. 멀리 떨어진 장치와 소통할 수 있게 해준다. 어떤 소통 방법이 가장 좋은 것인지 제안할 때 쓰는 것. 다수의 candidate(후보)들이 각가의 연결에서 제안되고 그들은 서로의 동의 하에 하나를 선택한다.
+
+이제 해야하는 일은 icecandidate event를 listen하는 것이다.
+서로 candidate들을 보내줘야 한다. 
+
+```js
+// app.js
+// makeConnection() 함수에 icecandidate라는 이벤트를 단다.
+myPeerConnection.addEventListener("icecandidate", handleIce);
+myPeerConnection.addEventListener("addstream", handleStream);
+
+function handleIce(data){
+// 서로 candidate를 주고 받는 함수
+    socket.emit("ice", data.cadidate, roomName);
+}
+
+function handleAddStream(data){
+
+}
+
+// server.js
+socket.on("ice", (ice, roomName) => {
+    socket.to(roomName).emit("ice", ice);
+})
+
+// app.js
+socket.on("ice", ice => {
+    myPeerConnection.addIceCandidate(ice);
+})
+```
+
+카메라를 바꿔도 상대방 화면에선 바뀌지 않는 문제를 해결해보자.
+Sender는 우리의 peer로 보내진 media stream track을 컨드롤하게 해준다.
+음소거, 카메라 변경 반영을 도와준다.
+```js
+async function handleCameraChange() {
+    await getMedia(camerasSEect.value);
+    if(myPeerConnection){
+        const videoSender = myPeerConnection.getSenders().find((sender) => sender.track.kind === "video");
+        videoSender.replaceTrack()
+    }
+}
+```
+
+아직 폰으로는 테스트를 할 수 없다.
+폰으로 테스트를 해보자.
+1. npm i lacaltunnel (local tunnel은 서버를 전세계와 공유하게 해준다. 일시적으로만 무료)
+2. npm i -g localtunnel
+3. lt를 사용해서 local tunnel을 호출할 수 있다.
+4. lt --port 3000 => 여기에 url이 나온다.
+5. url로 핸드폰 접속 가능함. (이건 stun service로 가능하게 된 것이다.)
+6. 하지만 컴퓨터와 폰이 다른 WIFI에 있지 않으면 에러가 생긴다. STUN 서버가 필요하다.
+
+___
+## STUN
+___
+
+STUN 서버는 컴퓨터가 공용 IP주소를 찾게 해준다.
+STUN 서버는 어떤 것을 request하면 인터넷에서 네가 누군지 알려주는 서버이다. **너의 장치에 공용주소를 알려준다.** 구글이 제공해주는 무료 서비스를 이용하는데, 이렇게 테스트가 아니라 진짜 서비스를 운영하게 위해서는 내 소유 STUN 서버를 소유해야 한다.
+
+```JS
+function makeConnection() {
+  myPeerConnection = new RTCPeerConnection({
+    iceServers: [
+      {
+        urls: [
+          "stun:stun.l.google.com:19302",
+          "stun:stun1.l.google.com:19302",
+          "stun:stun2.l.google.com:19302",
+          "stun:stun3.l.google.com:19302",
+          "stun:stun4.l.google.com:19302",
+        ],
+      },
+    ],
+  });
+  myPeerConnection.addEventListener("icecandidate", handleIce);
+  myPeerConnection.addEventListener("addstream", handleAddStream);
+  myStream
+    .getTracks()
+    .forEach((track) => myPeerConnection.addTrack(track, myStream));
+}
+```
+
+## RTCPeerConnection.createDataChannel()
+Data Channel는 peer-to-peer 유저가 언제든지 모든 종류의 데이터를 주고 받을 수 잇는 채널이다. Socket.io없이도 채팅을 만들 수 있다. 그냥 채팅을 만들면 메세지가 peer-to-peer로 전달된다. 위치를 계속 보낼 수 있음
+
+```js
+// Offerer side
+var pc = new RTCPeerConnection(options);
+var channel = pc.createDataChannel("chat");
+//channel.onopen은 channel.addEventListener("open")과 같다.
+channel.onopen = function(event) {
+    channel.send('hi you!');
+}
+channel.onmessage = function(event) {
+    console.log(enent.data);
+}
+
+//Answerer side
+var pc = new RTCPeerConnection(options);
+pc.ondatachannel = function(event){
+    var channel = event.channel;
+    channel.onopne = funtion(event) {
+        channel.send('Hi back!');
+    }
+    channel.onmessage = function(event){
+        console.log(event.data);
+    }
+}
+
+```
+
+webRTC의 안좋은점
+    우리가 너무 많은 peer을 가질 때. peer 수가 많아지면 속도가 느려질 것이다. 세명까지만 하는 것이 좋을 것 같다. 다른 사람의 비디오 등을 가져오는데 힘이 너무 든다.
+    -> 몇몇 회사는 SFU Selective Forwarding Unit을 이용하는데, 이건 서버에 의존한다. 모두가 스트림을 중앙 서버에 업로드하고 다운로드 하고 있다. 이 서버는 스트림들을 압축하고 있다. 우리가 서버에 업로드하면, 서버는 다른 사람들에게 저사양의 스트림을 제공한다. 누가 말하고 있는지, 누가 스크린을 공유하고 있는지에 따라 사양을 달리하여 제공한다. webRTC는 우리가 최고사양의 스트림을 다운로드하거나 업로드했었다. 채팅을 하거나 위치를 보낼 때에는 상관이 없지만 비디오를 사용할 때에 문제가 생긴다.
+
+    webRTC는 큰 서버가 필요없다는 점에서는 좋다.
+
+    서버가 있는 것이 상관이 없다면 Socket.IO가 좋은 선택
+    메세지를 보내는데 서버가 필요없다면 Data Channel이 한 가지 방법이 될 것 같다.
+
+## Data Channel
+
+offer을 만들기 전에 Data Channel을 만들어야 한다.
+
+```js
+// 이 부분은 A에게 일어나는 일
+socket.on("welcome", async () => {
+  myDataChannel = myPeerConnection.createDataChannel("chat");
+  myDataChannel.addEventListener("message", (event) => console.log(event.data));
+  console.log("made data channel"); //다른 Peer은 다른 채널을 만들 필요가 없다.
+  const offer = await myPeerConnection.createOffer();
+  myPeerConnection.setLocalDescription(offer);
+  console.log("sent the offer");
+  socket.emit("offer", offer, roomName);
+});
+
+// 이 부분은 B에게 일어나는 일
+socket.on("offer", async (offer) => {
+  myPeerConnection.addEventListener("datachannel", (event) => {
+    myDataChannel = event.channel;
+    myDataChannel.addEventListener("message", (event) =>
+      console.log(event.data)
+    );
+  });
+  console.log("received the offer");
+  myPeerConnection.setRemoteDescription(offer);
+  const answer = await myPeerConnection.createAnswer();
+  myPeerConnection.setLocalDescription(answer);
+  socket.emit("answer", answer, roomName);
+  console.log("sent the answer");
+});
+
+// 메시지를 보내는 방법
+myDataChannel.send("hello")
+```
+
+console 찍어가면서 data 조회해보기
 
 
 
