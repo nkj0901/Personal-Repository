@@ -9,7 +9,7 @@
 2. Create React App
 ```js
 //원하는 폴더 위치로 이동한 후에 아래 코드 실행
-npx create-reate-app my-app(내가 원하는 이름)
+npx create-react-app my-app(내가 원하는 이름)
 //위 코드를 수행하면 원하는 폴더 위치 안에 내가 지정한 이름으로 react 프로젝트가 생긴다.
 cd my-app
 //npm은 node package manager
@@ -66,12 +66,6 @@ import할 것에는 {}를 쓴다.
 6. useState는 항상 배열을 반환한다. 이 배열에는 두가지 element가 있다. 그 배영르 상수에 저장하거나, 배열을 de-structuring할 수 있다. (de-structuring은 두 개의 값을 저장할 수 있는 자바스크립트의 기능)
 const [ modalIsOpen, setModalIsOpen] = useState(false); 첫번째 element는 state의 snapshot이기 때문이다. 그니까 여기에선 false이다. 두번째 element는 state값을 변경할 수 있게 하는 함수이다. 이 state 변경 함수를 호출할 때마다 리액트는 이 state가 속해있는 컴포넌트 함수를 재실행해서 코드를 재검증한다. 최신의 state값을 렌더링 할 수도있고 아니면 state 값에 따라 다른 화면을 렌더링할 수 있다.
 setModalIsOpen(true);를 통해 modalIsOpen의 값을 변경할 수 있음. 리액트와 jsx에서 조건부로 component를 랜더링할 때에는 { modalIsOpen ? <Modal /> : null } 이런 삼항연산식을 이용한다. 이 식은 { modalIsOpen && <Modal />}
-
-## event props로 작업하기
-1. 사용자 정의 태그에 onClick으로 이벤트를 달아주면 props로 받아줘야 한다. 우리가 직접 만든 컴포넌트에는 내장된 props가 없음...그래서 props를 직접 설정해줘야 한다.
-2. 자바스크립트에서는 함수가 일급객체이기 때문에 props로 전달해줄 수 있다.
-3. 함수는 컴포넌트 안에서 실행될 수 있고 지금처럼 다른 컴포넌트로 포워딩을 해줄 수도 있다.
-4. 사용자 정의 태그에는 onClick 말고 다른 말을 써도 되지만, 내장 태그에는 onClick을 써야 한다.
 
 vscode 추천 extensions
 1. prettier   
