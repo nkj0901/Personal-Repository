@@ -9,7 +9,7 @@ ___
 1. touch README.md
 2. npm i nodemon -D 
     nodemon은 파일에 변경사항이 있을 때 마다 서버를 다시 실행시켜준다.
-3. babel.config.json 파일 추가~
+3. babel.config.json 파일 추가
 4. nodemon.config.json 파일 추가
 5. src 폴더 추가
 6. src 디렌토리에 server.js 추가
@@ -451,7 +451,7 @@ async function handleCameraChange() {
 3. lt를 사용해서 local tunnel을 호출할 수 있다.
 4. lt --port 3000 => 여기에 url이 나온다.
 5. url로 핸드폰 접속 가능함. (이건 stun service로 가능하게 된 것이다.)
-6. 하지만 컴퓨터와 폰이 같은 WIFI에 있지 않으면 에러가 생긴다. STUN 서버가 필요하다.
+6. 하지만 컴퓨터와 폰이 다른 WIFI에 있지 않으면 에러가 생긴다. STUN 서버가 필요하다.
 
 ___
 ## STUN
@@ -559,9 +559,6 @@ myDataChannel.send("hello")
 
 console 찍어가면서 data 조회해보기
 
-## STUN과 TURN
-TRUN 서버는 STUN 서버의 개념을 포함하고 있는 Super Set이며 STUN 서버 처럼 단순히 라우팅 테이블을 통해서 private ip와 private ip를 연결하는데에서 그치지 않는다.
 
-webRTC를 예로 들면 미디어 데이터를 1:1로 보내준다고 했을 때, 그 모든 데이터는 TURN 서버를 Relay 서버로 하여 데이터를 원하는 Peer에게 전달해주게 된다.
 
 

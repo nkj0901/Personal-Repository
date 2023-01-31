@@ -60,9 +60,8 @@ function Chat() {
       })
   }
 
-
 useEffect(() => {
-  socketRef.current = io("192.168.31.154:5000");
+  socketRef.current = io();
   initCall();
 
   socketRef.current.on("welcome", async () => {
