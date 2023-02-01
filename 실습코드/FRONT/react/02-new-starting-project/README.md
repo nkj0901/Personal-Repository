@@ -146,5 +146,77 @@ for(const key in data){
 }
 ```
 
-## 여러개에 영향을 미치는 state를 관리하자
+## 여러개에 영향을 미치는 state를 관리하자(컨텍스트)
+1. state 관리 솔류션 컨텍스트를 사용하자 ex) 리덕스
+2. 하지만 리액트에도 기보적으로 내장된 관리 솔루션이 있다. -> context
+3. scr 폴더에 store 폴더를 생성한다. (이름은 아무거나해도 상관없지만 일반적으로 store이라고 한다.)
+4. favorites-context.js 생성
+5. import { createContext } from 'react' 
+6. createContext(); context 생성
+7. Context는 자바스크립트의 객체이다. 이걸 상수에다가 저장하자 const FavoritesContext = createContext(); 변수명을 대문자로 시작한 이유는 Context로 생성되는 이 객체가 리액트 컴포넌트를 포함하기 때문이다.
+8. 이 createContext도 하나의 인자를 가진다. 이 인자는 context의 초기값이다. 어떤 값으로든 설정할 수 있다.
+9. function FavoritesContextProvider(props){}은 컴포넌트지만 값을 받으려하는 모든 컴포넌트에 context를 전달, 업데이트 해주는 역할을 한다.
+10. return <FavoritesContext.Provider> {props.children} </FavoritesContext.Provider> Context 반환하는 역할을한다. 
+11. index.js라는 파일에서 이것을 사용해 전체 애플리케이션을 래핑하고 앱의 모든 컴포넌트가 context에 접근할 수 있게 할 것이다.
+12. Context 값이 변경되면 영향을 받는 모든 컴포넌트들은 최신 데이터를 쓸 수 있다.
+13. FavoritesContextProvider에 context 객체를 만들고 FavoritesContext.Provider에 값으로 전달한다.
+```js
+function FavortiesContextProvider(props){
+    const context = {};
 
+    return <FavoritesContext.Provider value={context}>
+        {props.children}
+    </FavoritesContext.Provider>
+}
+```
+14. context 객체와 그 값을 동적으로 도출하기만 하면된다. 이때 useState를 사용한다.
+```js
+    const [userFavorites, setUserFavorites] = useState([]);
+
+    const context = {
+        favorites: userFavorites,
+        totalFavorites: userFavorites.length
+    };
+
+```
+15. context의 값을 변경하는 함수들을 만드는데. 여기서는 setUserFavorites(여기에 변경된 값을 전달하는 것이 아니라 상태 변경 함수에 직접 함수를 실행하도록 하자));
+16. context의 상태를 바꿀 함수들
+```js
+function addFavoriteHandler(favoriteMeetup) {
+    //setUserFavorites((prev) => {return 변경값}); 상태변경 함수는 자동으로 이전 값을 가져온다.
+        setUserFavorites((preUserFavorites)=>{
+            return preUserFavorites.concat(favoriteMeetup);S
+        })
+    }
+
+    function removeFavoriteHandler(meetupId){
+        setUserFavorites(prevUserFavorites => {
+            //아이디가 같으면 사라진다. filter는 false인 것이 사라진다.
+            return prevUserFavorites.filter(meetup => meetup.id !== meetupId)
+        }
+    )
+    }
+
+    function itemIsFavoriteHandler(meetupId){
+        //조건에 맞는 것이 하나라도 있으면 true를 반환한다.
+        return userFavorites.some(meetup => meetup.id === meetupId);
+    }
+```
+
+## 컴포넌트에서 context 사용하기
+1. 컴포넌트에 상태변경함수들을 노출시키자. context에 함수를 추가시키자(초기값 설정에 빈 함수를 넣어주면, 나중에 IDE 자동완성을 쉽게 해준다.)
+2. 상태 바꾸는 함수들이 있는 function을 앞에 export로 바꾸기. 마지막에 context만 export하는 구문도 추가
+3. context 파일에서는 2개의 export를 사용하고 있다. 두개 다 필요하다.
+4. 관련된 모든 컴포넌트를 래핑하자. 제일 쉬운 방법은 모든 컴포넌트를 그대로 래핑하는 것. index.js에 해당 context 파일 임포트하기
+```js
+// 객체가 아니라 함수를 가져와야 하기 때문에 {}로 묶는다.
+import { FavoritesContextProvider } from "./store/favorites-context";
+```
+5. 태그로 묶는다.
+6. 데이터가 필요한 컴포넌트로 가서 작업을 해보자
+7. useContext를 import 한다.
+8. useContext(); useContext 호출하고 연결할 context 객체를 인자로 전달하기만 하면 된다. 
+9. import FavoritesContext from '../../store/favorites-context';
+10. const favoritesCtx = useContext(FavoritesContext); 상수에 담하주고, 인자로 임포트한 것을 전달해주자. 이렇게 하면 현재 context의 스냅샷을 얻을 수 있음.
+11. value prop 접근 가능
+12. const tiemIsFavorite = FavoriteCtx.itmeIsFavorite 등의 방식으로 context에 접근할 수 있다.
