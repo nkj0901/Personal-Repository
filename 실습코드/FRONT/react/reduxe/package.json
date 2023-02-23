@@ -1,0 +1,15 @@
+{
+  "name": "reduxe",
+  "version": "1.0.0",
+  "description": "둘 다 저장된 값을 다양한 컴포넌트에서 가져다 쓸 수 있음\r 컨텍스트는 자주 바뀌는 값에는 적절하지 않다. 많이 사용하다보면 엄청나게 중첩된 JSX를 반환할 수 있다.\r 하나의 컨텍스트를 만들어서 모든 컴포넌트들을 감싸면 안되냐고 생각할 수 있지만, 그렇게 하면 한 파일에 너무 많은 코드들이 들어가 복잡한 코드로 이뤄지게 되어 \r 코드관리가 어려워 질 수 있다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.2.1"
+  }
+}
