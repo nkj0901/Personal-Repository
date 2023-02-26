@@ -19,23 +19,23 @@ public class JpaMain {
         tx.begin();
 
         try {
-            //영속
-//            Member member1 = new Member(150L, "A");
-//            Member member2 = new Member(160L, "B");
-//
-//            em.persist(member1);
-//            em.persist(member2);
-//
 
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAAAA");
+            //등록
+            Member member = new Member();
+            member.setId(3L);
+            member.setName("helloB");
+            //조회
+            Member findMember = em.find(Member.class, 1L);
+            System.out.println(findMember.getId());
+            System.out.println(findMember.getName());
+            //삭제
+            em.remove(findMember);
+            //수정
+            //자바 객체의 값만 바꿨는데 어떻게 반영이 된거지?
+            //커밋을 하기 전에 객체의 값이 바뀌면 Update 쿼리를 날린다.
+            findMember.setName("helloJPA");
+            em.persist(member);
 
-            em.clear();
-
-            Member member2 = em.find(Member.class, 150L);
-//            member2.setName("dddddddd");
-
-            System.out.println("============");
             tx.commit();
         } catch (Exception e) {
             tx.rollback();

@@ -8,7 +8,7 @@ version: 1.0.0
    
 
 2. 라이브러리 추가     
-   ```
+   ```agsl
    <?xml version="1.0" encoding="UTF-8"?>
     <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -84,10 +84,11 @@ version: 1.0.0
 - @Id : 데이터베이스가 PK와 매핑
 ```agsl
 // 데이터베이스에 테이블 만들기
-create table Member (
-id bigint not null,
-name varchar(255),
-primary
+create table Member ( 
+ id bigint not null, 
+ name varchar(255), 
+ primary key (id) 
+)
 ```
 ```agsl
 //자바 클래스 만들기

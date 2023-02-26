@@ -11,15 +11,6 @@ public class Member {
     private Long id;
     private String name;
 
-    //jpa는 객체를 동적으로 생성하기 때문에 기본생성자가 꼭 필요하다.
-    public Member() {
-    }
-
-    public Member(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     public Long getId() {
         return id;
     }
