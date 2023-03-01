@@ -17,6 +17,24 @@ public class Main {
     tx.begin();
 
     try {
+        Team team = new Team();
+        team.setName("TeamA");
+        em.persist((team));
+
+        Member member = new Member();
+        member.setName("member1");
+        member.setTeam(team);
+        em.persist(member);
+
+        //멤버가 속한 팀을 찾기
+        Member findMember = em.find(Member.class, member.getId());
+        Team findTeam = findMember.getTeam();
+        System.out.println("findTeam = " + findTeam.getName());
+
+        //팀바꾸기 (팀 db에서 가져와서 업데이트하기)
+        Team newTeam = em.find(Team.class, 100L);
+        findMember.setTeam(newTeam);
+
         tx.commit();
     } catch (Exception e) {
         tx.rollback();
