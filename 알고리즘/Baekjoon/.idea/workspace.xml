@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/EntityMapping2/.idea/EntityMapping2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/Delivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/DeliveryStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/다양한연관관계_실전예제/src/main/java/org/example/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/상속관계매핑/src/main/java/org/example/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/상속관계매핑/src/main/java/org/example/JpaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/상속관계매핑/src/main/java/org/example/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main11279최대힙_pq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main11279최소힙_pq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main11725트리의부모찾기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2573빙산_bfs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main색종이만들기_dfs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/src/main/java/org/example/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/src/main/java/org/example/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/target/classes/org/example/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/RelationMapping/target/classes/org/example/Team.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1339단어수학_그리디.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baekjoon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +38,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SSAFY/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/알고리즘/Baekjoon&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/알고리즘/Baekjoon&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,14 +55,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main11725트리의부모찾기">
-    <configuration name="Main11279최대힙_pq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main11279최대힙_pq" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main16234인구인동">
     <configuration name="Main11279최소힙_pq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main11279최소힙_pq" />
       <module name="Baekjoon" />
@@ -98,6 +65,13 @@
     </configuration>
     <configuration name="Main11725트리의부모찾기" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main11725트리의부모찾기" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1339단어수학_그리디" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main1339단어수학_그리디" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,17 +114,13 @@
     <list>
       <item itemvalue="Application.Main16234인구인동" />
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Main11279최대힙_pq" />
+      <item itemvalue="Application.Main11279최소힙_pq" />
       <item itemvalue="Application.Main11725트리의부모찾기" />
+      <item itemvalue="Application.Main1339단어수학_그리디" />
       <item itemvalue="Application.Main2573빙산_bfs" />
       <item itemvalue="Application.Main5073삼각형과세변" />
       <item itemvalue="Application.Main색종이만들기_dfs" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main11725트리의부모찾기" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -185,6 +155,8 @@
       <workItem from="1677752543478" duration="45000" />
       <workItem from="1677806171361" duration="5236000" />
       <workItem from="1677815190356" duration="5080000" />
+      <workItem from="1678025198241" duration="7207000" />
+      <workItem from="1678073390256" duration="658000" />
     </task>
     <servers />
   </component>
