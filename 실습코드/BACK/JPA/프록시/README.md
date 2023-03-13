@@ -81,3 +81,54 @@ m.getTeam().getTeam();
 @JoinColumn(name = "TEAM_ID")
 private Team team;
 ```
+- 조회할 때 조인해서 한방에 다 가지고 온다. Proxy가 아니라 실제 객체가 조회된다.
+- JPA 구현체는 가능하면 조인을 사용해서 SQL 한번에 함께 조회한다.
+
+### 프록시와 즉시로딩 주의
+- 가급적 지연 로딩만 사용(특히 실무에서)
+- 즉시 로딩을 적용하면 예상하지 못한 SQL이 발생(조인이 다섯개 이상만 되면 성능이..., 실무에서는 테이블이 복잡하게 연결되어 있으므로 주의)
+- 즉시 로딩은 JPQL에서 N+1 문제를 일으킨다.
+```agsl
+//pk로 하나만 가져오는 것은 상관없음
+Member m = em.find(Member.class, member1.getId());
+
+List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
+// Member를 가져와야지 하면서 SELECT * FROM MEMBER 쿼리를 보낸다
+// 어라? EAGER네? 하면서 SELECT * FROM TEAM WHERE TEAM_ID = XXX를 또 보내게 된다.
+```
+
+```agsl
+Team team1 = new Team();
+team1.setName("aaa");
+em.persist(team1);
+
+Team team2 = new Team();
+team2.setName("aaa");
+em.persist(team2);
+
+Member member1 = new Member();
+member1.setName("asdf");
+member1.setTeam(team1);
+em.persist(member1);
+
+Member member2 = new Member();
+member2.setName("asdf");
+member2.setTeam(team2);
+em.persist(member2);
+
+em.flush();
+em.clear();
+
+//이 경우 Member를 다 가져오는 쿼리를 보냄 (1)
+//그 다음 Member 2명이 가지고 있는 팀이 다르니 쿼리 2개를 더 보내게 됨 (N)
+List<Member> members = em.createQuery("select m from Member m", Member.class)
+        .getResultList();
+```
+  -> 해결방법 : 일단 모두 lazy로 깔고 fetch조인으로 동적으로 선택해서 가져온다.(나중에 배울 것)
+- @ManyToOne, @OneToOne 기본이 즉시 로딩 -> lazy로 설정 ** 중요
+- @OneToMany, @ManyToMany는 기본이 지연로딩
+
+### 지연 로딩 활용 - 실무
+- 모든 연관관계에 지연 로딩을 사용해라
+- JPQL fetch 조인이나, 엔티티 그래프 기능을 사용해라
+- 즉시 로딩은 상상하지 못한 쿼리가 나간다.

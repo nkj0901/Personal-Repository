@@ -38,21 +38,21 @@ ___
 @Entity
 public class Member {
 
-    @Id
-    private Long id;
-    @Column(name = "name") //컬럼 매핑, DB와 객체의 이름이 다를 때 name 사용
-    private String username;
-    private Integer age;
-    @Enumerated(EnumType.STRING) //DB에는 enum이 없음. enum타입 매핑
-    private RoleType roleType;
-    @Temporal(TemporalType.TIMESTAMP) //날짜 타입 매핑(date, time, timestamp 설정)
-    private Date createdDate;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
-    @Lob //varchar를 넘어서는 굉장히 큰 아이가 들어올 때. String이면 cLob으로 매핑
-    private String description;
-    @Transient // 특정 필드를 컬럼에 매핑하지 않음(매핑 무시)
-    private String tmp;
+@Id
+private Long id;
+@Column(name = "name") //컬럼 매핑, DB와 객체의 이름이 다를 때 name 사용
+private String username;
+private Integer age;
+@Enumerated(EnumType.STRING) //DB에는 enum이 없음. enum타입 매핑
+private RoleType roleType;
+@Temporal(TemporalType.TIMESTAMP) //날짜 타입 매핑(date, time, timestamp 설정)
+private Date createdDate;
+@Temporal(TemporalType.TIMESTAMP)
+private Date lastModifiedDate;
+@Lob //varchar를 넘어서는 굉장히 큰 아이가 들어올 때. String이면 cLob으로 매핑
+private String description;
+@Transient // 특정 필드를 컬럼에 매핑하지 않음(매핑 무시)
+private String tmp;
 }
 ```
 

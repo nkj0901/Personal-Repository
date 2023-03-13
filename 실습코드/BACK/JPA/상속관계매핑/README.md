@@ -109,3 +109,23 @@ ___
 - 부모 클래스를 상속 받는 자식 클래스에 매핑 정보만 제공
 - 조회, 검색 불가
 - 직접 생성해서 사용할 일이 없으므로 추상 클래스 권장
+
+```agsl
+@MappedSuperclass
+public class BaseEntity {
+    //중복되는 것들
+
+    private String createBy;
+    private LocalDateTime createdDate;
+    private String lastModifiedBy;
+    private LocalDateTime lastModifiedDate;
+}
+
+//원하는 객체에 extends BaseEntity 붙여주기
+@Entity
+public class Team extends BaseEntity {
+    @Id @GeneratedValue
+    @Column(name = "TEAM_ID")
+    private Long id;
+}
+```

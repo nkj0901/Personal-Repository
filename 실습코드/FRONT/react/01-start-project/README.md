@@ -5,7 +5,7 @@
 빌드단계를 거쳐야하기 때문에 파일이 다양하게 여러가지가 있다.
 
 1. node.js 설치
-서버 자동 리로딩, 코드를 브라우저에서 작동하게 만들기 위해. create-react-app을 설치하고 설치 후 사용할 때 내부적으로 계속 node.js를 쓰게 되기 때문에 설치가 필요함.
+서버 자동 리로딩, 코드를 브라우저에서 작동하게 만들기 위해. create-react-app 후 사용할 때 내부적으로 계속 node.js를 쓰게 되기 때문에 설치가 필요함.
 2. Create React App
 ```js
 //원하는 폴더 위치로 이동한 후에 아래 코드 실행
@@ -15,9 +15,9 @@ cd my-app
 //npm은 node package manager
 npm start
 ```
-3. server 종료는 ctrl+c
+- server 종료는 ctrl+c
     
-4. **index.js**가 우리 프로젝트의 시작점이 된다. 여기에 작성하는 코드가 브라우저에서 실행되는 최초의 코드이다.   
+**index.js**가 우리 프로젝트의 시작점이 된다. 여기에 작성하는 코드가 브라우저에서 실행되는 최초의 코드이다.   
 자바스크립트 구문 안의 HTML 코드는 빌드를 통해서만 사용 가능하다. 이런 코드를 jsx라고 한다.
 ```js
 ReactDOM.render(<App />, document.getElementById('root'));
