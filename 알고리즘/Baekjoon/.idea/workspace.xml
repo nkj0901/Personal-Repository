@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/영속성전이_CASCADE_고아객체/src/main/java/org/example/Child.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/영속성전이_CASCADE_고아객체/src/main/java/org/example/Parent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/.idea/프록시.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1043거짓말_그래프.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1789수들의합_그리디.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/EntityMapping/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/EntityMapping/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/src/main/java/org/example/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/src/main/java/org/example/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/target/classes/org/example/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../실습코드/BACK/JPA/프록시/target/classes/org/example/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1846장기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -41,31 +33,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/SSAFY/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/실습코드/BACK/JPA/영속성전이_CASCADE_고아객체",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SSAFY/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/알고리즘/Baekjoon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main1043거짓말_그래프">
+  <component name="RunManager" selected="Application.Main1846장기">
     <configuration name="Main1043거짓말_그래프" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main1043거짓말_그래프" />
       <module name="Baekjoon" />
@@ -87,8 +79,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main2573빙산_bfs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main2573빙산_bfs" />
+    <configuration name="Main1846장기" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main1846장기" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,14 +109,15 @@
     <list>
       <item itemvalue="Application.Main16234인구인동" />
       <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Main1846장기" />
       <item itemvalue="Application.Main1043거짓말_그래프" />
       <item itemvalue="Application.Main1789수들의합_그리디" />
-      <item itemvalue="Application.Main2573빙산_bfs" />
       <item itemvalue="Application.Main5073삼각형과세변" />
       <item itemvalue="Application.Main색종이만들기_dfs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main1846장기" />
         <item itemvalue="Application.Main1043거짓말_그래프" />
         <item itemvalue="Application.Main1789수들의합_그리디" />
       </list>
@@ -166,6 +159,10 @@
       <workItem from="1678025198241" duration="7207000" />
       <workItem from="1678073390256" duration="658000" />
       <workItem from="1678334721949" duration="4714000" />
+      <workItem from="1679494675761" duration="6598000" />
+      <workItem from="1679536121013" duration="8000" />
+      <workItem from="1679586409483" duration="1868000" />
+      <workItem from="1680092910983" duration="639000" />
     </task>
     <servers />
   </component>
@@ -190,6 +187,10 @@
           <line>29</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.OutOfMemoryError" package="java.lang" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
