@@ -5,7 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main10431줄세우기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main10974모든순열.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main11501주식.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1157단어공부.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main11723집합.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1244스위치키고끄기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main12865평범한배낭.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main13305주유소.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main14002.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1406에디터.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1515수이어쓰기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main17266어두운굴다리SWEEPTNG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main17281.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main17484진우의달여행.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main18111마인크래프트구현.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1890점프.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main19637if문좀대신써줘.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main19941햄버거분배.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main20006랭킹전대기열.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main20125쿠키의신체측정.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main20310타노스.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main20920영단어암기는괴로워.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main21921블로그.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2493탑stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2512예산_이분탐색.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main25757임스와함께하는미니게임.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2607비슷한단어.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main3273두수의합_투포인터.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main3758KCPC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main4659비밀번호.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main5525IOIOI문자열.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main7568덩치.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main9017크로스컨트리.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main9935문자열폭발.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main23971ZOAC4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main23971ZOAC4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +60,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -31,33 +73,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/user/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/알고리즘/Baekjoon",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Dropbox/대전_4반_남기정/GIT HUB/Personal-Repository/알고리즘/Baekjoon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SSAFY\Dropbox\대전_4반_남기정\GIT HUB\Personal-Repository\알고리즘\Baekjoon\src" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.Main16234인구인동">
-    <configuration name="Main1043거짓말_그래프" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1043거짓말_그래프" />
+  <component name="RunManager" selected="애플리케이션.test">
+    <configuration name="Main11501주식" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main11501주식" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1406에디터" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main1406에디터" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -70,29 +122,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main1789수들의합_그리디" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1789수들의합_그리디" />
+    <configuration name="Main20006랭킹전대기열" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main20006랭킹전대기열" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main1846장기" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1846장기" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main5073삼각형과세변" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main5073삼각형과세변" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main색종이만들기_dfs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main색종이만들기_dfs" />
+    <configuration name="Main2493탑stack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main2493탑stack" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,15 +142,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="애플리케이션.Main16234인구인동" />
       <item itemvalue="애플리케이션.Unnamed" />
-      <item itemvalue="애플리케이션.Main1043거짓말_그래프" />
-      <item itemvalue="애플리케이션.Main1789수들의합_그리디" />
-      <item itemvalue="애플리케이션.Main1846장기" />
-      <item itemvalue="애플리케이션.Main5073삼각형과세변" />
-      <item itemvalue="애플리케이션.Main색종이만들기_dfs" />
+      <item itemvalue="애플리케이션.test" />
+      <item itemvalue="애플리케이션.Main2493탑stack" />
+      <item itemvalue="애플리케이션.Main1406에디터" />
+      <item itemvalue="애플리케이션.Main11501주식" />
+      <item itemvalue="애플리케이션.Main20006랭킹전대기열" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.test" />
+        <item itemvalue="애플리케이션.Main2493탑stack" />
+        <item itemvalue="애플리케이션.Main1406에디터" />
+        <item itemvalue="애플리케이션.Main11501주식" />
+        <item itemvalue="애플리케이션.Main20006랭킹전대기열" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -154,7 +208,53 @@
       <workItem from="1679536121013" duration="8000" />
       <workItem from="1679586409483" duration="1868000" />
       <workItem from="1680092910983" duration="639000" />
-      <workItem from="1682429200608" duration="2091000" />
+      <workItem from="1682429200608" duration="3397000" />
+      <workItem from="1682603100133" duration="4526000" />
+      <workItem from="1683433118830" duration="3766000" />
+      <workItem from="1683730891851" duration="2043000" />
+      <workItem from="1684482935391" duration="1727000" />
+      <workItem from="1684830165289" duration="11034000" />
+      <workItem from="1685013471156" duration="3395000" />
+      <workItem from="1685085180588" duration="3972000" />
+      <workItem from="1685261047898" duration="4786000" />
+      <workItem from="1685290054755" duration="2341000" />
+      <workItem from="1685292434189" duration="1021000" />
+      <workItem from="1685293498118" duration="2171000" />
+      <workItem from="1685350420822" duration="1585000" />
+      <workItem from="1685352025559" duration="2859000" />
+      <workItem from="1685426331868" duration="5936000" />
+      <workItem from="1685432894229" duration="4299000" />
+      <workItem from="1685454826444" duration="2000" />
+      <workItem from="1685600427656" duration="6623000" />
+      <workItem from="1685710194493" duration="6613000" />
+      <workItem from="1686323296145" duration="3602000" />
+      <workItem from="1686511893224" duration="3000" />
+      <workItem from="1686513608484" duration="12000" />
+      <workItem from="1686667376037" duration="4585000" />
+      <workItem from="1686714725716" duration="4398000" />
+      <workItem from="1686804721791" duration="12802000" />
+      <workItem from="1687002994791" duration="4000" />
+      <workItem from="1687156048626" duration="2377000" />
+      <workItem from="1687248271719" duration="5554000" />
+      <workItem from="1687440936221" duration="1322000" />
+      <workItem from="1687673704657" duration="3974000" />
+      <workItem from="1687759611705" duration="3669000" />
+      <workItem from="1687961826712" duration="2844000" />
+      <workItem from="1688006858434" duration="698000" />
+      <workItem from="1688010121929" duration="2229000" />
+      <workItem from="1688097698268" duration="1670000" />
+      <workItem from="1688438080838" duration="4765000" />
+      <workItem from="1688525300590" duration="4194000" />
+      <workItem from="1689138339509" duration="3224000" />
+      <workItem from="1689247233719" duration="5577000" />
+      <workItem from="1689256207674" duration="63000" />
+      <workItem from="1689260984214" duration="44000" />
+      <workItem from="1689312185564" duration="5315000" />
+      <workItem from="1689403797127" duration="8000" />
+      <workItem from="1689431631056" duration="6720000" />
+      <workItem from="1689490920045" duration="15000" />
+      <workItem from="1689509993594" duration="1345000" />
+      <workItem from="1689800554718" duration="114000" />
     </task>
     <servers />
   </component>
@@ -164,24 +264,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main색종이만들기_dfs.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main색종이만들기_dfs.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main색종이만들기_dfs.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.OutOfMemoryError" package="java.lang" />
           <option name="timeStamp" value="11" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="12" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

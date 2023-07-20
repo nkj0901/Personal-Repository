@@ -1,0 +1,1 @@
+geth --networkid 15 --mine --miner.threads 2 --datadir "./" --unlock 0 --nodiscover --http --http.port "8545" --http.corsdomain "*" --nat "any" --http.api eth,web3,personal,net --allow-insecure-unlock --password ./password.sec --miner.etherbase=b99f6291e4ac2d7d88233ce6aadf07c9a2cb668e
