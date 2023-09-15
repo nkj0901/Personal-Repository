@@ -5,43 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main10431줄세우기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main10974모든순열.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main11501주식.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1157단어공부.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main11723집합.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1244스위치키고끄기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main12865평범한배낭.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main13305주유소.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main14002.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1406에디터.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1515수이어쓰기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main17266어두운굴다리SWEEPTNG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main17281.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main17484진우의달여행.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main18111마인크래프트구현.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1890점프.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main19637if문좀대신써줘.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main19941햄버거분배.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main20006랭킹전대기열.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main20125쿠키의신체측정.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main20310타노스.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main20920영단어암기는괴로워.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main21921블로그.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2493탑stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2512예산_이분탐색.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main25757임스와함께하는미니게임.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2607비슷한단어.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main3273두수의합_투포인터.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main3758KCPC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main4659비밀번호.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main5525IOIOI문자열.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main7568덩치.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main9017크로스컨트리.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main9935문자열폭발.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main11057오르막수.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1138한줄로서기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main11659구간합구하기_누적합.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1263시간관리_그리디.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main128521로만들기2_DP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main13335트럭.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1446지름길.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main14940쉬운최단거리.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main15591MooTube_그래프.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main15681트리와쿼리_트리DP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main15989123더하기4_dp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main17255N으로만들기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main17609회문.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main17609회문2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1863스카이라인쉬운거_스택.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1920수찾기_이분탐색.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1935후위표기식2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main20075N번째큰수.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main20922겹치는건실어_투포인트.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2110공유기설치_이분탐색.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2138전구와스위치_그리디.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2225빌런호석.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2304창고다각형.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2467용액_투포인터.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2668숫자고르기_그래프dfs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2747피보나치수_DP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main4179불_bfs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main5972택배배송_다잌.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main7490_0만들기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main7682틱택톡_구현.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main23971ZOAC4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main23971ZOAC4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main1043거짓말_그래프.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main1043거짓말_그래프.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main1238파티_다잌스트라.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main1238파티_다잌스트라.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +50,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -85,10 +83,10 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;전역 라이브러리&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -100,16 +98,23 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.test">
-    <configuration name="Main11501주식" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main11501주식" />
+  <component name="RunManager" selected="애플리케이션.Main128521로만들기2_DP">
+    <configuration name="Main11659구간합구하기_누적합" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main11659구간합구하기_누적합" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main1406에디터" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1406에디터" />
+    <configuration name="Main128521로만들기2_DP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main128521로만들기2_DP" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main15681트리와쿼리_트리DP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main15681트리와쿼리_트리DP" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,15 +127,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main20006랭킹전대기열" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main20006랭킹전대기열" />
+    <configuration name="Main17255N으로만들기" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main17255N으로만들기" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main2493탑stack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main2493탑stack" />
+    <configuration name="Main17609회문" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main17609회문" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main4179불_bfs" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main4179불_bfs" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,29 +154,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="애플리케이션.Main4179불_bfs" />
       <item itemvalue="애플리케이션.Main16234인구인동" />
       <item itemvalue="애플리케이션.Unnamed" />
-      <item itemvalue="애플리케이션.test" />
-      <item itemvalue="애플리케이션.Main2493탑stack" />
-      <item itemvalue="애플리케이션.Main1406에디터" />
-      <item itemvalue="애플리케이션.Main11501주식" />
-      <item itemvalue="애플리케이션.Main20006랭킹전대기열" />
+      <item itemvalue="애플리케이션.Main11659구간합구하기_누적합" />
+      <item itemvalue="애플리케이션.Main128521로만들기2_DP" />
+      <item itemvalue="애플리케이션.Main15681트리와쿼리_트리DP" />
+      <item itemvalue="애플리케이션.Main17255N으로만들기" />
+      <item itemvalue="애플리케이션.Main17609회문" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.test" />
-        <item itemvalue="애플리케이션.Main2493탑stack" />
-        <item itemvalue="애플리케이션.Main1406에디터" />
-        <item itemvalue="애플리케이션.Main11501주식" />
-        <item itemvalue="애플리케이션.Main20006랭킹전대기열" />
+        <item itemvalue="애플리케이션.Main128521로만들기2_DP" />
+        <item itemvalue="애플리케이션.Main11659구간합구하기_누적합" />
+        <item itemvalue="애플리케이션.Main15681트리와쿼리_트리DP" />
+        <item itemvalue="애플리케이션.Main17609회문" />
+        <item itemvalue="애플리케이션.Main17255N으로만들기" />
       </list>
     </recent_temporary>
   </component>
@@ -255,6 +261,39 @@
       <workItem from="1689490920045" duration="15000" />
       <workItem from="1689509993594" duration="1345000" />
       <workItem from="1689800554718" duration="114000" />
+      <workItem from="1689864729865" duration="3146000" />
+      <workItem from="1689916121533" duration="3683000" />
+      <workItem from="1690178093056" duration="6551000" />
+      <workItem from="1690267361159" duration="7769000" />
+      <workItem from="1690348678025" duration="5060000" />
+      <workItem from="1690456994814" duration="6281000" />
+      <workItem from="1690795861052" duration="8773000" />
+      <workItem from="1690898106993" duration="3838000" />
+      <workItem from="1690902774883" duration="2266000" />
+      <workItem from="1690905096004" duration="2612000" />
+      <workItem from="1690960641688" duration="16000" />
+      <workItem from="1690986061726" duration="607000" />
+      <workItem from="1690990281316" duration="1000" />
+      <workItem from="1690992895493" duration="4000" />
+      <workItem from="1690998456225" duration="611000" />
+      <workItem from="1691054136175" duration="2213000" />
+      <workItem from="1691154066572" duration="5328000" />
+      <workItem from="1691191933488" duration="851000" />
+      <workItem from="1691571394065" duration="7239000" />
+      <workItem from="1691673678601" duration="882000" />
+      <workItem from="1691737575242" duration="595000" />
+      <workItem from="1691935303872" duration="11432000" />
+      <workItem from="1691994062281" duration="1140000" />
+      <workItem from="1692617587095" duration="965000" />
+      <workItem from="1692798582811" duration="1417000" />
+      <workItem from="1693382702917" duration="7458000" />
+      <workItem from="1693499078894" duration="2627000" />
+      <workItem from="1693808180585" duration="592000" />
+      <workItem from="1693825960859" duration="5638000" />
+      <workItem from="1693904253039" duration="8896000" />
+      <workItem from="1693971769267" duration="8291000" />
+      <workItem from="1694102371684" duration="3401000" />
+      <workItem from="1694165240166" duration="4120000" />
     </task>
     <servers />
   </component>
@@ -274,5 +313,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
