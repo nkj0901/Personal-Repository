@@ -5,33 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91338dad-a9a2-43c6-8893-59ed6a2fdc13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main1027고층건물_선분기울기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main10451순열사이클.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main10844쉬운계단수_dp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main11047동전0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1120문자열_브루트.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1189컴백홈_dfs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main13144listofuniquenumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1389케빈베이컨의6단계법칙_bfs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main14466소가길을건너간이유6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main14716현수막_bfs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main14888연산자끼워넣기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main15649N과M.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main15649N과M2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main15649N과M3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1644소수의연속합.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main16500문자열판별_dp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main16918봄버맨.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1943동전분배.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main1976여행가자_bfs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2179비슷한단어.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main22866탑보기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main24337가희와탑_그리디.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2631줄세우기_LIS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2866문자열잘라내기.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main9934완전이진트리_dfs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main11055_가장큰증가하는부분수열_dp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main15683감시_백트랙킹.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main15810풍선공장_이분탐색.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main16236아기상어_시뮬레이션.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1655가운데를말해요_pq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main16639괄호추가하기3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main16967배열복원하기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main1715카드정렬하기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main18429근손실_브루트포스.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2193이친수_dp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main2638치즈_시뮬레이션.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main3020개똥벌레_이분탐색.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main9527_1의개수세기_dp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,30 +77,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.Main1644소수의연속합">
-    <configuration name="Main14888연산자끼워넣기" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main14888연산자끼워넣기" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main15649N과M" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main15649N과M" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main15649N과M2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main15649N과M2" />
-      <module name="Baekjoon" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main15649N과M3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main15649N과M3" />
+  <component name="RunManager" selected="애플리케이션.Main1715카드정렬하기">
+    <configuration name="Main11055_가장큰증가하는부분수열_dp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main11055_가장큰증가하는부분수열_dp" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,8 +92,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main1644소수의연속합" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main1644소수의연속합" />
+    <configuration name="Main16236아기상어_시뮬레이션" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main16236아기상어_시뮬레이션" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main1715카드정렬하기" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main1715카드정렬하기" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main18429근손실_브루트포스" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main18429근손실_브루트포스" />
+      <module name="Baekjoon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main2193이친수_dp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main2193이친수_dp" />
       <module name="Baekjoon" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,19 +137,19 @@
       <item itemvalue="애플리케이션.Main4179불_bfs" />
       <item itemvalue="애플리케이션.Main16234인구인동" />
       <item itemvalue="애플리케이션.Unnamed" />
-      <item itemvalue="애플리케이션.Main14888연산자끼워넣기" />
-      <item itemvalue="애플리케이션.Main15649N과M" />
-      <item itemvalue="애플리케이션.Main15649N과M2" />
-      <item itemvalue="애플리케이션.Main15649N과M3" />
-      <item itemvalue="애플리케이션.Main1644소수의연속합" />
+      <item itemvalue="애플리케이션.Main1715카드정렬하기" />
+      <item itemvalue="애플리케이션.Main11055_가장큰증가하는부분수열_dp" />
+      <item itemvalue="애플리케이션.Main16236아기상어_시뮬레이션" />
+      <item itemvalue="애플리케이션.Main18429근손실_브루트포스" />
+      <item itemvalue="애플리케이션.Main2193이친수_dp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.Main1644소수의연속합" />
-        <item itemvalue="애플리케이션.Main14888연산자끼워넣기" />
-        <item itemvalue="애플리케이션.Main15649N과M3" />
-        <item itemvalue="애플리케이션.Main15649N과M2" />
-        <item itemvalue="애플리케이션.Main15649N과M" />
+        <item itemvalue="애플리케이션.Main1715카드정렬하기" />
+        <item itemvalue="애플리케이션.Main11055_가장큰증가하는부분수열_dp" />
+        <item itemvalue="애플리케이션.Main2193이친수_dp" />
+        <item itemvalue="애플리케이션.Main18429근손실_브루트포스" />
+        <item itemvalue="애플리케이션.Main16236아기상어_시뮬레이션" />
       </list>
     </recent_temporary>
   </component>
@@ -304,6 +291,13 @@
       <workItem from="1697466434425" duration="8902000" />
       <workItem from="1697623134048" duration="9681000" />
       <workItem from="1697704347733" duration="10362000" />
+      <workItem from="1697994311566" duration="3501000" />
+      <workItem from="1698047708637" duration="10975000" />
+      <workItem from="1698139779198" duration="13337000" />
+      <workItem from="1698212411473" duration="18695000" />
+      <workItem from="1698380582136" duration="884000" />
+      <workItem from="1698405984120" duration="2518000" />
+      <workItem from="1700481135872" duration="4416000" />
     </task>
     <servers />
   </component>
