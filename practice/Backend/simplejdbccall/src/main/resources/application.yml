@@ -1,0 +1,4 @@
+#application.properties
+spring:
+  profiles:
+    include: hide
